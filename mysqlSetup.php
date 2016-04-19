@@ -24,12 +24,12 @@ class Database
 	function connect($info, $req)
 	{
 		
-		$infoDb = new PDO("mysql:host=proj1-XX;dbname=$info;charset=utf8mb4", 'accessaccount', 'accesspass', array(PDO::ATTR_TIMEOUT => "120"));
+		$infoDb = new PDO("mysql:host=localhost;dbname=$info;charset=utf8mb4", 'accessaccount', 'accesspass', array(PDO::ATTR_TIMEOUT => "120"));
 		$infoDb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$infoDb->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		$infoDb->setAttribute(PDO::ATTR_TIMEOUT, 240);
 		
-		$reqDb = new PDO("mysql:host=proj1-XX;dbname=$req;charset=utf8mb4", 'accessaccount', 'accesspass', array(PDO::ATTR_TIMEOUT => "120"));
+		$reqDb = new PDO("mysql:host=localhost;dbname=$req;charset=utf8mb4", 'accessaccount', 'accesspass', array(PDO::ATTR_TIMEOUT => "120"));
 		$reqDb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$reqDb->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		$reqDb->setAttribute(PDO::ATTR_TIMEOUT, 240);
@@ -56,7 +56,7 @@ class Database
 	function fetchReqs($className)
 	{
 		$prereqs = array();
-		$result = $this->reqDb->query("SELECT * from `$className` ORDER BY `requirementClass` ASC;");		
+		$result = $this->reqDb->query("SELECT * FROM prereqs WHERE CID = `$className` ORDER BY `requirementClass` ASC;");		
 		
 		$ctr = 0;
 		$curClass = 0;
