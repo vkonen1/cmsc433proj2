@@ -43,7 +43,7 @@ class Database
 	function fetchClasses()
 	{
 		$classes = array();	
-		$result = $this->infoDb->query("SELECT * FROM `classes`");
+		$result = $this->infoDb->query("SELECT * FROM classes");
 		while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 			array_push($classes, $row);
 		}
@@ -56,7 +56,7 @@ class Database
 	function fetchReqs($classId)
 	{
 		$prereqs = array();
-		$result = $this->reqDb->query("SELECT * FROM prereqs WHERE CID = `$classId` ORDER BY `requirementClass` ASC;");		
+		$result = $this->reqDb->query("SELECT * FROM prereqs WHERE CID = '$classId' ORDER BY requirementClass ASC;");		
 		
 		$ctr = 0;
 		$curClass = 0;
