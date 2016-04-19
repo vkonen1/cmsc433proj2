@@ -43,9 +43,9 @@ class Database
 	function fetchClasses()
 	{
 		$classes = array();	
-		$result = $this->infoDb->query("SELECT `CID` FROM `classes`");
+		$result = $this->infoDb->query("SELECT * FROM `classes`");
 		while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-			array_push($classes, $row['CID']);
+			array_push($classes, $row);
 		}
 		
 		return $classes;
@@ -53,10 +53,10 @@ class Database
 
 	// Given a CID, this fetches the requirements as an array of preqreq classes
 	// each class containing an array of requirements for that class
-	function fetchReqs($className)
+	function fetchReqs($classId)
 	{
 		$prereqs = array();
-		$result = $this->reqDb->query("SELECT * FROM prereqs WHERE CID = `$className` ORDER BY `requirementClass` ASC;");		
+		$result = $this->reqDb->query("SELECT * FROM prereqs WHERE CID = `$classId` ORDER BY `requirementClass` ASC;");		
 		
 		$ctr = 0;
 		$curClass = 0;
@@ -80,7 +80,7 @@ class Database
 		return $prereqs;
 	}
 	
-	// Fetches the prereqs for each class in the database and returns them as @author Kyte Aryus
+	// Fetches the prereqs for each class in the database and returns them as a
 	// 4d array that simulates a HashMap of 3d arrays (see the README)
 	function fetchAllReqs()
 	{
@@ -90,7 +90,7 @@ class Database
 		foreach($classes as $class) {
 			$simulateMap = array();
 			array_push($simulateMap, $class);
-			array_push($simulateMap, $this->fetchReqs($class));
+			array_push($simulateMap, $this->fetchReqs($class['CID']));
 			array_push($allReqs, $simulateMap);
 		}
 		
