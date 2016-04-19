@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2016 at 05:28 PM
+-- Generation Time: Apr 19, 2016 at 05:52 PM
 -- Server version: 10.0.23-MariaDB
 -- PHP Version: 5.6.19
 
@@ -27,7 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `classes` (
-  `CID` varchar(6) NOT NULL
+  `CID` varchar(6) NOT NULL,
+  `type` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Course IDs';
 
 -- --------------------------------------------------------
