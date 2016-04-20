@@ -51,6 +51,17 @@ class Database
 		return $classes;
 	}
 
+	function fetchClassNames()
+	{
+		$classes = array();	
+		$result = $this->infoDb->query("SELECT name FROM classes");
+		while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+			array_push($classes, $row["name"]);
+		}
+		
+		return $classes;
+	}
+
 	// Given a CID, this fetches the requirements as an array of preqreq classes
 	// each class containing an array of requirements for that class
 	function fetchReqs($classId)
@@ -68,7 +79,7 @@ class Database
 			// Find all classes in the current prereq class (indicated by curClass)
 			$reqsInClass = array();
 			while($ctr < sizeof($allPrereqs) && $allPrereqs[$ctr]['requirementClass'] == $curClass) {
-				array_push($reqsInClass, $allPrereqs[$ctr]['requirement']);
+				array_push($reqsInClass, $this->fetchClassName($allPrereqs[$ctr]['requirement']));
 				$ctr++;
 			}
 			
@@ -89,12 +100,26 @@ class Database
 		
 		foreach($classes as $class) {
 			$simulateMap = array();
-			array_push($simulateMap, $class);
+			array_push($simulateMap, $class['name']);
 			array_push($simulateMap, $this->fetchReqs($class['CID']));
 			array_push($allReqs, $simulateMap);
 		}
 		
 		return $allReqs;
+	}
+
+	function fetchClassName($classId)
+	{
+		$result = $this->infoDb->query("SELECT name FROM classes WHERE CID = '$classId'");
+		$class = $result->fetch(PDO::FETCH_ASSOC);
+		return $class['name'];
+	}
+
+	function fetchClassId($className)
+	{
+		$result = $this->infoDb->query("SELECT CID FROM classes WHERE name = '$className'");
+		$class = $result->fetch(PDO::FETCH_ASSOC);
+		return $class['CID'];
 	}
 
 }

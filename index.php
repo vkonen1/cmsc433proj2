@@ -8,17 +8,9 @@
  *              handling page (which currently does not exist).
  * ***************************************************************************************************************** */
 
-// The server has been having slow connection issues recently, because of this
-// the massive array of class requirements is better cached in a SESSION variable
-// rather than being re-generated on page load.
-session_start();
-if (!isset($_SESSION['classReqs'])) {
-    ini_set('max_execution_time', 300); // I know this is ad hoc and bad practice but it works for now
-    require_once("mysqlSetup.php");
-    $db = new Database();
-    $_SESSION['classReqs'] = $db->fetchAllReqs(); // Declared in mysqlSetup.php
-}
-$classReqs = $_SESSION['classReqs'];
+require_once("mysqlSetup.php");
+$db = new Database();
+$classReqs = $db->fetchAllReqs();
 ?>
 
 
@@ -105,85 +97,85 @@ Doesn't react well to wrapping: breaks the graph
             <div class="tree">
                 <ul>
                     <li>
-                        <span class="required" id="cmscGateway">CMSC  <br /> Gateway <br />
-                            <a id="cmsc201" href="#">CMSC 201</a> 
-                            <a id="cmsc202" href="#">CMSC 202</a> 
-                            <a id="cmsc203" href="#">CMSC 203</a> 
+                        <span class="required" id="CMSCGateway">CMSC  <br /> Gateway <br />
+                            <a id="CMSC201" href="#">CMSC 201</a> 
+                            <a id="CMSC202" href="#">CMSC 202</a> 
+                            <a id="CMSC203" href="#">CMSC 203</a> 
                         </span>
                         <ul>
                             <li>
-                                <span id="cmsc203dep" >CMSC 203 <br /> Dependants <br />
-                                    <a id="cmsc451" href="#">CMSC 451</a> <br />
-                                    <a id="cmsc452" href="#">CMSC 452</a> <br />
-                                    <a id="cmsc457" href="#">CMSC 457</a>   <br />
+                                <span id="CMSC203dep" >CMSC 203 <br /> Dependants <br />
+                                    <a id="CMSC451" href="#">CMSC 451</a> <br />
+                                    <a id="CMSC452" href="#">CMSC 452</a> <br />
+                                    <a id="CMSC457" href="#">CMSC 457</a>   <br />
                                 </span>
                             </li>
                             <li>
-                                <span id="cmsc202dep" >CMSC 202 <br /> Dependants <br />
-                                    <a id="cmsc304" href="#">CMSC 304</a> <br />
-                                    <a id="cmsc484" href="#">CMSC 484</a> <br />
+                                <span id="CMSC202dep" >CMSC 202 <br /> Dependants <br />
+                                    <a id="CMSC304" href="#">CMSC 304</a> <br />
+                                    <a id="CMSC484" href="#">CMSC 484</a> <br />
                                 </span>
                             </li>
                             <!-- these all have children -->
 
                             <li>
-                                <a class="required" id="cmsc313" href="#">CMSC 313</a>
+                                <a class="required" id="CMSC313" href="#">CMSC 313</a>
                                 <ul>
                                     <li>
-                                        <span id="cmsc313dep">CMSC 313 <br /> Dependant <br />
-                                            <a class="required" id="cmsc411" href="#">CMSC 411</a>
+                                        <span id="CMSC313dep">CMSC 313 <br /> Dependant <br />
+                                            <a class="required" id="CMSC411" href="#">CMSC 411</a>
                                         </span>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="required" id="cmsc331" href="#">CMSC 331</a>
+                                <a class="required" id="CMSC331" href="#">CMSC 331</a>
                                 <ul>
                                     <li>
-                                        <span id="cmsc331dep" >CMSC 331 <br /> Dependants <br />
-                                            <a id="cmsc432" href="#">CMSC 432</a> <br />
-                                            <a id="cmsc433" href="#">CMSC 433</a> <br />
-                                            <a id="cmsc473" href="#">CMSC 473</a>
+                                        <span id="CMSC331dep" >CMSC 331 <br /> Dependants <br />
+                                            <a id="CMSC432" href="#">CMSC 432</a> <br />
+                                            <a id="CMSC433" href="#">CMSC 433</a> <br />
+                                            <a id="CMSC473" href="#">CMSC 473</a>
                                         </span>
                                     </li>                                
                                 </ul>
                             </li>
                             <li>
-                                <a class="required" id="cmsc341" href="#">CMSC 341</a>
+                                <a class="required" id="CMSC341" href="#">CMSC 341</a>
                                 <ul>
                                     <li>
-                                        <span id="cmsc341dep">CMSC 341 <br /> Dependants <br />
+                                        <span id="CMSC341dep">CMSC 341 <br /> Dependants <br />
 
-                                            <a id="cmsc436" href="#">CMSC 436</a> <br />
-                                            <a id="cmsc437" href="#">CMSC 437</a> 
-                                            <a class="required" id="cmsc441" href="#">CMSC 441</a> <br />
-                                            <a id="cmsc443" href="#">CMSC 443</a> 
-                                            <a id="cmsc453" href="#">CMSC 453</a> <br />
-                                            <a id="cmsc455" href="#">CMSC 455</a> 
-                                            <a id="cmsc456" href="#">CMSC 456</a> <br />
-                                            <a id="cmsc475" href="#">CMSC 475</a> 
-                                            <a id="cmsc476" href="#">CMSC 476</a> 
+                                            <a id="CMSC436" href="#">CMSC 436</a> <br />
+                                            <a id="CMSC437" href="#">CMSC 437</a> 
+                                            <a class="required" id="CMSC441" href="#">CMSC 441</a> <br />
+                                            <a id="CMSC443" href="#">CMSC 443</a> 
+                                            <a id="CMSC453" href="#">CMSC 453</a> <br />
+                                            <a id="CMSC455" href="#">CMSC 455</a> 
+                                            <a id="CMSC456" href="#">CMSC 456</a> <br />
+                                            <a id="CMSC475" href="#">CMSC 475</a> 
+                                            <a id="CMSC476" href="#">CMSC 476</a> 
                                         </span>
                                     </li>
 
                                     <li>
-                                        <a id="cmsc461" href="#">CMSC 461</a>
+                                        <a id="CMSC461" href="#">CMSC 461</a>
                                     </li>
                                     <li>
-                                        <a id="cmsc471" href="#">CMSC 471</a>
+                                        <a id="CMSC471" href="#">CMSC 471</a>
                                         <ul>
                                             <li>
-                                                <span id="cmsc471dep">CMSC 471 <br /> Dependants<br />
-                                                    <a id="cmsc477" href="#">CMSC 477</a> <br />
-                                                    <a id="cmsc478" href="#">CMSC 478</a> <br />
-                                                    <a id="cmsc479" href="#">CMSC 479</a>
+                                                <span id="CMSC471dep">CMSC 471 <br /> Dependants<br />
+                                                    <a id="CMSC477" href="#">CMSC 477</a> <br />
+                                                    <a id="CMSC478" href="#">CMSC 478</a> <br />
+                                                    <a id="CMSC479" href="#">CMSC 479</a>
                                                 </span>
                                             </li>             
 
                                         </ul>                                    
                                     </li>                            
                                     <li>
-                                        <a id="cmsc481" href="#">CMSC 481</a>
+                                        <a id="CMSC481" href="#">CMSC 481</a>
                                     </li>
                                 </ul>
                             </li>
@@ -199,20 +191,20 @@ Doesn't react well to wrapping: breaks the graph
                         <ul>
                             <li>
                                 <span id="no-prereq" href="#">No Prereqs <br />
-                                    <a id="cmsc427" href="#">CMSC 427</a> <br />
-                                    <a id="cmsc486" href="#">CMSC 486</a>
+                                    <a id="CMSC427" href="#">CMSC 427</a> <br />
+                                    <a id="CMSC486" href="#">CMSC 486</a>
                                 </span>                                
                             </li>
                             <li>
                                 <a id="313_341" href="#">CMSC 313 & 341</a>
                                 <ul>
                                     <li>                                                                           
-                                        <a class="required" id="cmsc421" href="#">CMSC 421</a>
+                                        <a class="required" id="CMSC421" href="#">CMSC 421</a>
                                         <ul>
                                             <li>
                                                 <span>
-                                                    <a id="cmsc426" href="#">CMSC 426</a> <br />
-                                                    <a id="cmsc483" href="#">CMSC 483</a> 
+                                                    <a id="CMSC426" href="#">CMSC 426</a> <br />
+                                                    <a id="CMSC483" href="#">CMSC 483</a> 
                                                 </span>
                                             </li>
                                         </ul>                                                                         
@@ -220,7 +212,7 @@ Doesn't react well to wrapping: breaks the graph
 
 
                                     <li>
-                                        <a id="cmsc435" href="#">CMSC 435</a> 
+                                        <a id="CMSC435" href="#">CMSC 435</a> 
                                     </li>
                                 </ul>
                             </li>
@@ -228,7 +220,7 @@ Doesn't react well to wrapping: breaks the graph
                                 <a id="435_471" href="#">CMSC 435 & 471</a>
                                 <ul>
                                     <li>
-                                        <a id="cmsc493" href="#">CMSC 493</a>
+                                        <a id="CMSC493" href="#">CMSC 493</a>
                                     </li>
                                 </ul>
                             </li>
@@ -236,10 +228,10 @@ Doesn't react well to wrapping: breaks the graph
                                 <a id="any400" href="#">Any 4xx<br /> & 341</a>
                                 <ul>
                                     <li>
-                                        <a class="required" id="cmsc447" href="#">CMSC 447</a>
+                                        <a class="required" id="CMSC447" href="#">CMSC 447</a>
                                         <ul>
                                             <li>
-                                                <a id="cmsc448" href="#">CMSC 448</a>
+                                                <a id="CMSC448" href="#">CMSC 448</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -250,8 +242,8 @@ Doesn't react well to wrapping: breaks the graph
                                 <ul>
                                     <li>
                                         <span>
-                                            <a id="cmsc465" href="#">CMSC 465</a> <br />
-                                            <a id="cmsc466" href="#">CMSC 466</a>
+                                            <a id="CMSC465" href="#">CMSC 465</a> <br />
+                                            <a id="CMSC466" href="#">CMSC 466</a>
                                         </span>
                                     </li>
                                 </ul>
@@ -260,7 +252,7 @@ Doesn't react well to wrapping: breaks the graph
                                 <a id="421_481" href="#">CMSC 421 & 481</a>
                                 <ul>
                                     <li>
-                                        <a id="cmsc487" href="#">CMSC 487</a>
+                                        <a id="CMSC487" href="#">CMSC 487</a>
                                     </li>
                                 </ul>
                             </li>                       

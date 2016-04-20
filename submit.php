@@ -41,13 +41,12 @@ $classes = explode(",", $classes);
 /* Validating $classes */
 $invalid = array();
 $notClasses = array();
-$allClasses = $db->fetchClasses();
-
+$allClasses = $db->fetchClassNames();
 
 foreach($classes as $class) {
 	
 	// If a class ID is misset, add it to the invalid array
-	if(!preg_match('/^cmsc[1-4][0-9]{2}(H|Y)?/', $class)) {
+	if(!preg_match('/^[A-Z]{3,4}[1-4][0-9]{2}(H|Y|L)?/', $class)) {
 		array_push($invalid, $class);
 		
 	// If a class is not a valid umbc class, add it to the notClasses array
@@ -104,7 +103,7 @@ try {
 	$query->bindParam(2, $CID);
 	
 	foreach($classes as $class) {
-		$CID = $class;
+		$CID = $db->fetchClassId($class);
 		$query->execute();
 	}
 	

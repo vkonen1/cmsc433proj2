@@ -1,10 +1,14 @@
 <!-- Javascript functions -->
+//console.log(classReqs);
 var classes = new Array(); // global array to manage classes entered
 // var classReqs = <?php echo $JSONreqs; ?>; // Declared in index.php
 // NOTE: The classReqs array is a four dimensional array and very confusing at first
 // 		 however, the entire array is document in the README. Please read that before
 //		 tampering with classReqs.
 	
+	window.onload = function() {
+		updateViews();
+	}
 	<!--
 	  // boxJump()
 	  // Preconditions: element is the element to jump from
@@ -48,7 +52,7 @@ var classes = new Array(); // global array to manage classes entered
 			// Getting relevent data
 			var dept = document.getElementsByName("department")[0].value;
 			var number = document.getElementsByName("coursenumber")[0].value;
-			var classString = (dept.concat(number)).toLowerCase();
+			var classString = (dept.concat(number)).toUpperCase();
 			
 			// Verify the proper form was used
 			if(!/[2-4][0-9]{2}/.test(number)) {
@@ -75,6 +79,7 @@ var classes = new Array(); // global array to manage classes entered
 			}
 			
 		}
+		//console.log(classes);
 		// Clearing textbox
 		document.getElementsByName("coursenumber")[0].value = "";
 
@@ -228,28 +233,28 @@ var classes = new Array(); // global array to manage classes entered
 		
 		// Special ids for joint class nodes
 		// id="313_341"
-		if(classes.indexOf('cmsc313') != -1 && classes.indexOf('cmsc341') != -1) {
+		if(classes.indexOf('CMSC313') != -1 && classes.indexOf('CMSC341') != -1) {
 			var element = document.getElementById("313_341");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="435_471"
-		if(classes.indexOf('cmsc435') != -1 && classes.indexOf('cmsc471') != -1) {
+		if(classes.indexOf('CMSC435') != -1 && classes.indexOf('CMSC471') != -1) {
 			var element = document.getElementById("435_471");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="421_481"
-		if(classes.indexOf('cmsc421') != -1 && classes.indexOf('cmsc481') != -1) {
+		if(classes.indexOf('CMSC421') != -1 && classes.indexOf('CMSC481') != -1) {
 			var element = document.getElementById("421_481");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="461_481"
-		if(classes.indexOf('cmsc461') != -1 && classes.indexOf('cmsc481') != -1) {
+		if(classes.indexOf('CMSC461') != -1 && classes.indexOf('CMSC481') != -1) {
 			var element = document.getElementById("461_481");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
