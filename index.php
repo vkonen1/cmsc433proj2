@@ -1,5 +1,5 @@
 <?php
-/* * *****************************************************************************************************************
+/* 	test comment* *****************************************************************************************************************
  *        File: index.php
  *     Created: 2/22/2016
  *     Project: CMSC 433 - Project 1
@@ -7,7 +7,6 @@
  *              All CSS should be written in style.css and all PHP should be written in the submission
  *              handling page (which currently does not exist).
  * ***************************************************************************************************************** */
-
 require_once("mysqlSetup.php");
 $db = new Database();
 $classReqs = $db->fetchAllReqs();
