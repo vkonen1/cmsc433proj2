@@ -29,6 +29,35 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 	}
+
+	function toggleClass(className) {
+		var type;
+		var num;
+		if (className.indexOf("CMSC") == 0 || className.indexOf("MATH") == 0) {
+			type = className.substring(0, 4);
+			num = className.substring(4);
+		} else {
+			type = className.substring(0, 3);
+			num = className.substring(3);
+		}
+
+		var toggle_ar = true;
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] == className) {
+				toggle_ar = false;
+				break;
+			}
+		}
+
+		document.getElementsByName("department")[0].value = type
+		document.getElementsByName("coursenumber")[0].value = num;
+
+		if (toggle_ar) {
+			updateClasses("addClass");
+		} else {
+			updateClasses("removeClass");
+		}
+	}
 	
 	<!--
 	  // updateClasses()
@@ -55,7 +84,7 @@ var classes = new Array(); // global array to manage classes entered
 			var classString = (dept.concat(number)).toUpperCase();
 			
 			// Verify the proper form was used
-			if(!/[2-4][0-9]{2}/.test(number)) {
+			if(!/[1-4][0-9]{2}/.test(number)) {
 				alert("Please enter class number between 200 and 499 in the form: ###");
 				return false;
 			}
@@ -132,8 +161,7 @@ var classes = new Array(); // global array to manage classes entered
 	 	// For each class display the class in the proper div.
 	 	var divHTML = "";
 	 	for(var i = 0; i < classes.length; i++) {
-		 	var string = classes[i].replace("cmsc", "CMSC ");
-		 	string = "<span class='course'>" + string + "</span> ";
+		 	string = "<span class='course'>" + classes[i] + "</span> ";
 		 	divHTML = divHTML + string;
 		}
 		div.innerHTML = divHTML;

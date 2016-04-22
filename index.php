@@ -13,8 +13,6 @@ $db = new Database();
 $classReqs = $db->fetchAllReqs();
 ?>
 
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -34,9 +32,8 @@ $classReqs = $db->fetchAllReqs();
                     <!--Most of the classes chosen will be in one of these departments-->
                     <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
                     <option value="cmsc" selected="selected">CMSC</option>
-                    <option value="math" disabled="disabled">MATH</option>
-                    <option value="stat" disabled="disabled">STAT</option>
-                    <option value="cmpe" disabled="disabled">CMPE</option>
+                    <option value="math">MATH</option>
+                    <option value="stat">SCI</option>
                 </select>*
                 <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###"></input>*
                 <br/>
@@ -83,99 +80,98 @@ $classReqs = $db->fetchAllReqs();
         </div>
 
         <!--
-formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
-and http://thecodeplayer.com/walkthrough/css3-family-tree
-View without css to better understand how the structure is built:
-Basically a list with sublists with some styling thrown over it to make it render differently.
+        formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
+        and http://thecodeplayer.com/walkthrough/css3-family-tree
+        View without css to better understand how the structure is built:
+        Basically a list with sublists with some styling thrown over it to make it render differently.
 
-if you have something that doesn't fit with the topdown perspective then
-go ahead and use the special cases graph
-Doesn't react well to wrapping: breaks the graph
+        if you have something that doesn't fit with the topdown perspective then
+        go ahead and use the special cases graph
+        Doesn't react well to wrapping: breaks the graph
         -->
-
         <div>
             <div class="tree">
                 <ul>
                     <li>
                         <span class="required" id="CMSCGateway">CMSC  <br /> Gateway <br />
-                            <a id="CMSC201" href="#">CMSC 201</a> 
-                            <a id="CMSC202" href="#">CMSC 202</a> 
-                            <a id="CMSC203" href="#">CMSC 203</a> 
+                            <a id="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> 
+                            <a id="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> 
+                            <a id="CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a> 
                         </span>
                         <ul>
                             <li>
                                 <span id="CMSC203dep" >CMSC 203 <br /> Dependants <br />
-                                    <a id="CMSC451" href="#">CMSC 451</a> <br />
-                                    <a id="CMSC452" href="#">CMSC 452</a> <br />
-                                    <a id="CMSC457" href="#">CMSC 457</a>   <br />
+                                    <a id="CMSC451" onclick="toggleClass('CMSC451')">CMSC 451</a> <br />
+                                    <a id="CMSC452" onclick="toggleClass('CMSC452')">CMSC 452</a> <br />
+                                    <a id="CMSC457" onclick="toggleClass('CMSC457')">CMSC 457</a>   <br />
                                 </span>
                             </li>
                             <li>
                                 <span id="CMSC202dep" >CMSC 202 <br /> Dependants <br />
-                                    <a id="CMSC304" href="#">CMSC 304</a> <br />
-                                    <a id="CMSC484" href="#">CMSC 484</a> <br />
+                                    <a id="CMSC304" onclick="toggleClass('CMSC304')">CMSC 304</a> <br />
+                                    <a id="CMSC484" onclick="toggleClass('CMSC484')">CMSC 484</a> <br />
                                 </span>
                             </li>
                             <!-- these all have children -->
 
                             <li>
-                                <a class="required" id="CMSC313" href="#">CMSC 313</a>
+                                <a class="required" id="CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a>
                                 <ul>
                                     <li>
                                         <span id="CMSC313dep">CMSC 313 <br /> Dependant <br />
-                                            <a class="required" id="CMSC411" href="#">CMSC 411</a>
+                                            <a class="required" id="CMSC411" onclick="toggleClass('CMSC411')">CMSC 411</a>
                                         </span>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="required" id="CMSC331" href="#">CMSC 331</a>
+                                <a class="required" id="CMSC331" onclick="toggleClass('CMSC331')">CMSC 331</a>
                                 <ul>
                                     <li>
                                         <span id="CMSC331dep" >CMSC 331 <br /> Dependants <br />
-                                            <a id="CMSC432" href="#">CMSC 432</a> <br />
-                                            <a id="CMSC433" href="#">CMSC 433</a> <br />
-                                            <a id="CMSC473" href="#">CMSC 473</a>
+                                            <a id="CMSC432" onclick="toggleClass('CMSC432')">CMSC 432</a> <br />
+                                            <a id="CMSC433" onclick="toggleClass('CMSC433')">CMSC 433</a> <br />
+                                            <a id="CMSC473" onclick="toggleClass('CMSC473')">CMSC 473</a>
                                         </span>
                                     </li>                                
                                 </ul>
                             </li>
                             <li>
-                                <a class="required" id="CMSC341" href="#">CMSC 341</a>
+                                <a class="required" id="CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
                                 <ul>
                                     <li>
                                         <span id="CMSC341dep">CMSC 341 <br /> Dependants <br />
 
-                                            <a id="CMSC436" href="#">CMSC 436</a> <br />
-                                            <a id="CMSC437" href="#">CMSC 437</a> 
-                                            <a class="required" id="CMSC441" href="#">CMSC 441</a> <br />
-                                            <a id="CMSC443" href="#">CMSC 443</a> 
-                                            <a id="CMSC453" href="#">CMSC 453</a> <br />
-                                            <a id="CMSC455" href="#">CMSC 455</a> 
-                                            <a id="CMSC456" href="#">CMSC 456</a> <br />
-                                            <a id="CMSC475" href="#">CMSC 475</a> 
-                                            <a id="CMSC476" href="#">CMSC 476</a> 
+                                            <a id="CMSC436" onclick="toggleClass('CMSC436')">CMSC 436</a> <br />
+                                            <a id="CMSC437" onclick="toggleClass('CMSC437')">CMSC 437</a> 
+                                            <a class="required" id="CMSC441">CMSC 441</a> <br />
+                                            <a id="CMSC443" onclick="toggleClass('CMSC443')">CMSC 443</a> 
+                                            <a id="CMSC453" onclick="toggleClass('CMSC453')">CMSC 453</a> <br />
+                                            <a id="CMSC455" onclick="toggleClass('CMSC455')">CMSC 455</a> 
+                                            <a id="CMSC456" onclick="toggleClass('CMSC456')">CMSC 456</a> <br />
+                                            <a id="CMSC475" onclick="toggleClass('CMSC475')">CMSC 475</a> 
+                                            <a id="CMSC476" onclick="toggleClass('CMSC476')">CMSC 476</a> 
                                         </span>
                                     </li>
 
                                     <li>
-                                        <a id="CMSC461" href="#">CMSC 461</a>
+                                        <a id="CMSC461" onclick="toggleClass('CMSC461')">CMSC 461</a>
                                     </li>
                                     <li>
-                                        <a id="CMSC471" href="#">CMSC 471</a>
+                                        <a id="CMSC471" onclick="toggleClass('CMSC471')">CMSC 471</a>
                                         <ul>
                                             <li>
                                                 <span id="CMSC471dep">CMSC 471 <br /> Dependants<br />
-                                                    <a id="CMSC477" href="#">CMSC 477</a> <br />
-                                                    <a id="CMSC478" href="#">CMSC 478</a> <br />
-                                                    <a id="CMSC479" href="#">CMSC 479</a>
+                                                    <a id="CMSC477" onclick="toggleClass('CMSC477')">CMSC 477</a> <br />
+                                                    <a id="CMSC478" onclick="toggleClass('CMSC478')">CMSC 478</a> <br />
+                                                    <a id="CMSC479" onclick="toggleClass('CMSC479')">CMSC 479</a>
                                                 </span>
                                             </li>             
 
                                         </ul>                                    
                                     </li>                            
                                     <li>
-                                        <a id="CMSC481" href="#">CMSC 481</a>
+                                        <a id="CMSC481" onclick="toggleClass('CMSC481')">CMSC 481</a>
                                     </li>
                                 </ul>
                             </li>
@@ -184,27 +180,27 @@ Doesn't react well to wrapping: breaks the graph
                 </ul>
             </div>
 
-            <div class="tree"  >
+            <div class="tree">
                 <ul>
                     <li>
-                        <a href="#">Multiple dependancies <br /> and special cases</a>
+                        <a>Multiple dependancies <br /> and special cases</a>
                         <ul>
                             <li>
-                                <span id="no-prereq" href="#">No Prereqs <br />
-                                    <a id="CMSC427" href="#">CMSC 427</a> <br />
-                                    <a id="CMSC486" href="#">CMSC 486</a>
+                                <span id="no-prereq">No Prereqs <br />
+                                    <a id="CMSC427" onclick="toggleClass('CMSC427')">CMSC 427</a> <br />
+                                    <a id="CMSC486" onclick="toggleClass('CMSC486')">CMSC 486</a>
                                 </span>                                
                             </li>
                             <li>
-                                <a id="313_341" href="#">CMSC 313 & 341</a>
+                                <a id="313_341">CMSC 313 & 341</a>
                                 <ul>
                                     <li>                                                                           
-                                        <a class="required" id="CMSC421" href="#">CMSC 421</a>
+                                        <a class="required" id="CMSC421" onclick="toggleClass('CMSC421')">CMSC 421</a>
                                         <ul>
                                             <li>
                                                 <span>
-                                                    <a id="CMSC426" href="#">CMSC 426</a> <br />
-                                                    <a id="CMSC483" href="#">CMSC 483</a> 
+                                                    <a id="CMSC426" onclick="toggleClass('CMSC426')">CMSC 426</a> <br />
+                                                    <a id="CMSC483" onclick="toggleClass('CMSC483')">CMSC 483</a> 
                                                 </span>
                                             </li>
                                         </ul>                                                                         
@@ -212,47 +208,47 @@ Doesn't react well to wrapping: breaks the graph
 
 
                                     <li>
-                                        <a id="CMSC435" href="#">CMSC 435</a> 
+                                        <a id="CMSC435" onclick="toggleClass('CMSC435')">CMSC 435</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a id="435_471" href="#">CMSC 435 & 471</a>
+                                <a id="435_471">CMSC 435 & 471</a>
                                 <ul>
                                     <li>
-                                        <a id="CMSC493" href="#">CMSC 493</a>
+                                        <a id="CMSC493" onclick="toggleClass('CMSC493')">CMSC 493</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a id="any400" href="#">Any 4xx<br /> & 341</a>
+                                <a id="any400">Any 4xx<br /> & 341</a>
                                 <ul>
                                     <li>
-                                        <a class="required" id="CMSC447" href="#">CMSC 447</a>
+                                        <a class="required" id="CMSC447" onclick="toggleClass('CMSC447')">CMSC 447</a>
                                         <ul>
                                             <li>
-                                                <a id="CMSC448" href="#">CMSC 448</a>
+                                                <a id="CMSC448" onclick="toggleClass('CMSC448')">CMSC 448</a>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a id="461_481" href="#">CMSC 461 & 481</a>
+                                <a id="461_481">CMSC 461 & 481</a>
                                 <ul>
                                     <li>
                                         <span>
-                                            <a id="CMSC465" href="#">CMSC 465</a> <br />
-                                            <a id="CMSC466" href="#">CMSC 466</a>
+                                            <a id="CMSC465" onclick="toggleClass('CMSC465')">CMSC 465</a> <br />
+                                            <a id="CMSC466" onclick="toggleClass('CMSC466')">CMSC 466</a>
                                         </span>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a id="421_481" href="#">CMSC 421 & 481</a>
+                                <a id="421_481">CMSC 421 & 481</a>
                                 <ul>
                                     <li>
-                                        <a id="CMSC487" href="#">CMSC 487</a>
+                                        <a id="CMSC487" onclick="toggleClass('CMSC487')">CMSC 487</a>
                                     </li>
                                 </ul>
                             </li>                       
