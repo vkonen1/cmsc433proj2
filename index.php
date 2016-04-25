@@ -91,7 +91,6 @@ $classReqs = $db->fetchAllReqs();
         <div>
             <div class="tree">
                 <ul>
-<<<<<<< HEAD
                     <li>
                         <span class="required" id="CMSCGateway">CMSC  <br /> Gateway <br />
                             <a id="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> 
@@ -177,107 +176,6 @@ $classReqs = $db->fetchAllReqs();
                             </li>
                         </ul>
                     </li>
-=======
-						<li>
-						 <span class="required" id="CMSCGateway">CMSC  <br /> Intro <br />
-                            <a id="CMSC201" href="#">CMSC 201</a> 
-								 <a class="required" id="MATH151" href="#" onclick="toggleClass('MATH151')">MATH 151</a>
-                    </span>
-							<ul>
-								<li>
-									
-									
-										<span class="required" id="CMSCGateway">CMSC  <br /> Gateway <br />
-											<a id="CMSC202" href="#">CMSC 202</a> 
-											<a id="CMSC203" href="#">CMSC 203</a> 
-										</span>
-										<ul>
-											<li>
-												<span id="CMSC203dep" >CMSC 203 <br /> Dependants <br />
-													<a id="CMSC451" href="#">CMSC 451</a> <br />
-													<a id="CMSC452" href="#">CMSC 452</a> <br />
-													<a id="CMSC457" href="#">CMSC 457</a>   <br />
-												</span>
-											</li>
-											<li>
-												<span id="CMSC202dep" >CMSC 202 <br /> Dependants <br />
-													<a id="CMSC304" href="#">CMSC 304</a> <br />
-													<a id="CMSC484" href="#">CMSC 484</a> <br />
-												</span>
-											</li>
-											<!-- these all have children -->
-
-											<li>
-												<a class="required" id="CMSC313" href="#">CMSC 313</a>
-												<ul>
-													<li>
-														<span id="CMSC313dep">CMSC 313 <br /> Dependant <br />
-															<a class="required" id="CMSC411" href="#">CMSC 411</a>
-														</span>
-													</li>
-												</ul>
-											</li>
-											<li>
-												<a class="required" id="CMSC331" href="#">CMSC 331</a>
-												<ul>
-													<li>
-														<span id="CMSC331dep" >CMSC 331 <br /> Dependants <br />
-															<a id="CMSC432" href="#">CMSC 432</a> <br />
-															<a id="CMSC433" href="#">CMSC 433</a> <br />
-															<a id="CMSC473" href="#">CMSC 473</a>
-														</span>
-													</li>                                
-												</ul>
-											</li>
-											<li>
-												<a class="required" id="CMSC341" href="#">CMSC 341</a>
-												<ul>
-													<li>
-														<span id="CMSC341dep">CMSC 341 <br /> Dependants <br />
-
-															<a id="CMSC436" href="#">CMSC 436</a> <br />
-															<a id="CMSC437" href="#">CMSC 437</a> 
-															<a class="required" id="CMSC441" href="#">CMSC 441</a> <br />
-															<a id="CMSC443" href="#">CMSC 443</a> 
-															<a id="CMSC453" href="#">CMSC 453</a> <br />
-															<a id="CMSC455" href="#">CMSC 455</a> 
-															<a id="CMSC456" href="#">CMSC 456</a> <br />
-															<a id="CMSC475" href="#">CMSC 475</a> 
-															<a id="CMSC476" href="#">CMSC 476</a> 
-														</span>
-													</li>
-
-													<li>
-														<a id="CMSC461" href="#">CMSC 461</a>
-													</li>
-													<li>
-														<a id="CMSC471" href="#">CMSC 471</a>
-														<ul>
-															<li>
-																<span id="CMSC471dep">CMSC 471 <br /> Dependants<br />
-																	<a id="CMSC477" href="#">CMSC 477</a> <br />
-																	<a id="CMSC478" href="#">CMSC 478</a> <br />
-																	<a id="CMSC479" href="#">CMSC 479</a>
-																</span>
-															</li>             
-
-														</ul>                                    
-													</li>                            
-													<li>
-														<a id="CMSC481" href="#">CMSC 481</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									
-									
-									
-									
-								
-							</ul>
-						</li>
->>>>>>> 6e379566915db0b9050f66b661c58bfcde6857d8
                 </ul>
             </div>
 
@@ -292,6 +190,7 @@ $classReqs = $db->fetchAllReqs();
                                     <a id="CMSC486" onclick="toggleClass('CMSC486')">CMSC 486</a>
                                 </span>                                
                             </li>
+							
                             <li>
                                 <a id="313_341">CMSC 313 & 341</a>
                                 <ul>
@@ -307,12 +206,29 @@ $classReqs = $db->fetchAllReqs();
                                         </ul>                                                                         
                                     </li>
 
-
                                     <li>
                                         <a id="CMSC435" onclick="toggleClass('CMSC435')">CMSC 435</a> 
                                     </li>
+
                                 </ul>
                             </li>
+							
+								 <li>
+									<a class="required" id="MATH221" href="#">MATH 221</a>
+										<ul>
+												<li>
+											<a id="313_341" href="#">CMSC 313 & 341</a>
+											<ul>
+												<li>
+													<a id="CMSC435" href="#">CMSC 435</a> 
+												</li>
+											</ul>
+													
+												</li>
+										</ul>
+                            </li>
+							
+							
                             <li>
                                 <a id="435_471">CMSC 435 & 471</a>
                                 <ul>
