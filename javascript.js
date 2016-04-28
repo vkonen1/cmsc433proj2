@@ -213,50 +213,52 @@ var classes = new Array(); // global array to manage classes entered
 				}
 			}
 			
+			/********
+			refactored this to style elements in a more concise way and select
+			multiple elements instead of just one
+			*******/
 			// If the class is valid, addClass will still be true
 			// so if it is, change the styling of the class link on the tree
 			// and make sure the dependency tree is not colored
-			if(addClass) {
-				var element = document.getElementById(classReqs[i][0]);
-				var depElement = document.getElementById(classReqs[i][0] + "dep");
-				if(element){
-					element.style.border = "2px solid #ffff00";
-					element.style.backgroundColor = "#ffff44";
+			var elements = document.getElementsByClassName(classReqs[i][0]);
+			var depElements = document.getElementsByClassName(classReqs[i][0] + "dep");
+			for (var j = 0; j < elements.length; j++) {
+				if (addClass) {
+					elements[j].style.border = "2px solid #ffff00";
+					elements[j].style.backgroundColor = "#ffff44";
+				} else {
+					elements[j].style.border = "2px solid #6A49A7";
+					elements[j].style.backgroundColor = "white";
+				}			
+			}
+			for (var j = 0; j < depElements.length; j++) {
+				if (addClass) {
+					depElements[j].style.border = "2px solid #6A49A7";
+					depElements[j].style.backgroundColor = "white";						
+				} else {
+					depElement[j].style.border = "2px solid #6A49A7";
+					depElement[j].style.backgroundColor = "white";
 				}
-				if(depElement) {
-					depElement.style.border = "2px solid #6A49A7";
-					depElement.style.backgroundColor = "white";
-				}
-				
-			// Otherwise reset the styling
-			} else {
-				var element = document.getElementById(classReqs[i][0]);	
-				var depElement = document.getElementById(classReqs[i][0] + "dep");
-				if(element) {
-					element.style.border = "2px solid #6A49A7";
-					element.style.backgroundColor = "white";
-				}
-				if(depElement) {
-					depElement.style.border = "2px solid #6A49A7";
-					depElement.style.backgroundColor = "white";
-				}
-				
-			}	
+			}
 		}
 		
 		// Changing tree properties
+		//refactored this as well
 		for(var i = 0; i < classes.length; i++) {
-			var element = document.getElementById(classes[i]);
-			var depElement = document.getElementById(classes[i] + "dep");
-			if(element) {
-				element.style.border = "2px solid #33cc33";
-				element.style.backgroundColor = "#adebad";
+			var elements = document.getElementsByClassName(classes[i]);
+			var depElements = document.getElementsByClassName(classes[i] + "dep");
+			if (elements) {
+				for (j = 0; j < elements.length; j++) {
+					elements[j].style.border = "2px solid #33cc33";
+					elements[j].style.backgroundColor = "#adebad";				
+				}				
 			}
-			if(depElement){
-				depElement.style.border = "2px solid #33cc33";
-				depElement.style.backgroundColor = "#adebad";
+			if (depElements) {
+				for (j = 0; j < depElements.length; j++) {
+					depElements[j].style.border = "2px solid #33cc33";
+					depElements[j].style.backgroundColor = "#adebad";				
+				}				
 			}
-			
 		}
 		
 		// Special ids for joint class nodes
