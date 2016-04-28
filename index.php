@@ -259,6 +259,30 @@ Doesn't react well to wrapping: breaks the graph
                     </li>
                 </ul>
             </div>	
+            <div class="tree">
+                <ul>
+                    <li>
+                        <a href="#">Science courses</a>
+                        <li>
+                            <span id="no-prereq" href="#">No Prereqs <br />
+                                <a id="GES120" href="#">GES 120</a> <br />
+                                <a id="GES110" href="#">GES 110</a> <br />
+                                <a id="GES111" href="#">GES 111</a> <br />
+                            </span>
+                        </li>
+                        <li>
+                            <a href="#">Math 151</a>
+                            <a id="Math151"></a>
+                            <ul>
+                                <li>
+                                    <a href="#">CHEM101</a>
+                                    <a id="CHEM101"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <!-- Include the javascript -->
