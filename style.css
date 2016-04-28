@@ -13,6 +13,10 @@ body
     overflow-x: hidden;
     background-color: #F5CA5C;
 }
+a
+{
+    cursor: pointer;
+}
 
 div.header
 {
@@ -268,30 +272,4 @@ right connector from last child*/
 {
 	border: 2px solid #33cc33;
 	background-color: #adebad;
-}
-
-/*Time for some hover effects*/
-/*We will apply the hover effect the the lineage of the element also*/
-/*style for hovering that highlights children */
-.tree li a:hover,
-.tree li a:hover+ul li a,
-.tree li a:hover+ul li span,
-.tree li span:hover,
-.tree li span:hover+ul li span,
-.tree li span:hover+ul li a
-{
-    background: #c8e4f8; color: #000; border: 2px solid #94a0b4;
-}
-
-/*Connector styles on hover*/
-.tree li a:hover+ul li::after, 
-.tree li a:hover+ul li::before, 
-.tree li a:hover+ul::before, 
-.tree li a:hover+ul ul::before,
-.tree li span:hover+ul li::after, 
-.tree li span:hover+ul li::before, 
-.tree li span:hover+ul::before, 
-.tree li span:hover+ul ul::before
-{
-    border-color:  #94a0b4;
 }

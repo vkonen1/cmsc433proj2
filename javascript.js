@@ -29,6 +29,35 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 	}
+
+	function toggleClass(className) {
+		var type;
+		var num;
+		if (className.indexOf("CMSC") == 0 || className.indexOf("MATH") == 0) {
+			type = className.substring(0, 4);
+			num = className.substring(4);
+		} else {
+			type = className.substring(0, 3);
+			num = className.substring(3);
+		}
+
+		var toggle_ar = true;
+		for (var i = 0; i < classes.length; i++) {
+			if (classes[i] == className) {
+				toggle_ar = false;
+				break;
+			}
+		}
+
+		document.getElementsByName("department")[0].value = type
+		document.getElementsByName("coursenumber")[0].value = num;
+
+		if (toggle_ar) {
+			updateClasses("addClass");
+		} else {
+			updateClasses("removeClass");
+		}
+	}
 	
 	<!--
 	  // updateClasses()
@@ -55,7 +84,7 @@ var classes = new Array(); // global array to manage classes entered
 			var classString = (dept.concat(number)).toUpperCase();
 			
 			// Verify the proper form was used
-			if(!/[2-4][0-9]{2}/.test(number)) {
+			if(!/[1-4][0-9]{2}/.test(number)) {
 				alert("Please enter class number between 200 and 499 in the form: ###");
 				return false;
 			}
@@ -132,8 +161,7 @@ var classes = new Array(); // global array to manage classes entered
 	 	// For each class display the class in the proper div.
 	 	var divHTML = "";
 	 	for(var i = 0; i < classes.length; i++) {
-		 	var string = classes[i].replace("cmsc", "CMSC ");
-		 	string = "<span class='course'>" + string + "</span> ";
+		 	string = "<span class='course'>" + classes[i] + "</span> ";
 		 	divHTML = divHTML + string;
 		}
 		div.innerHTML = divHTML;
@@ -185,50 +213,52 @@ var classes = new Array(); // global array to manage classes entered
 				}
 			}
 			
+			/********
+			refactored this to style elements in a more concise way and select
+			multiple elements instead of just one
+			*******/
 			// If the class is valid, addClass will still be true
 			// so if it is, change the styling of the class link on the tree
 			// and make sure the dependency tree is not colored
-			if(addClass) {
-				var element = document.getElementById(classReqs[i][0]);
-				var depElement = document.getElementById(classReqs[i][0] + "dep");
-				if(element){
-					element.style.border = "2px solid #ffff00";
-					element.style.backgroundColor = "#ffff44";
+			var elements = document.getElementsByClassName(classReqs[i][0]);
+			var depElements = document.getElementsByClassName(classReqs[i][0] + "dep");
+			for (var j = 0; j < elements.length; j++) {
+				if (addClass) {
+					elements[j].style.border = "2px solid #ffff00";
+					elements[j].style.backgroundColor = "#ffff44";
+				} else {
+					elements[j].style.border = "2px solid #6A49A7";
+					elements[j].style.backgroundColor = "white";
+				}			
+			}
+			for (var j = 0; j < depElements.length; j++) {
+				if (addClass) {
+					depElements[j].style.border = "2px solid #6A49A7";
+					depElements[j].style.backgroundColor = "white";						
+				} else {
+					depElement[j].style.border = "2px solid #6A49A7";
+					depElement[j].style.backgroundColor = "white";
 				}
-				if(depElement) {
-					depElement.style.border = "2px solid #6A49A7";
-					depElement.style.backgroundColor = "white";
-				}
-				
-			// Otherwise reset the styling
-			} else {
-				var element = document.getElementById(classReqs[i][0]);	
-				var depElement = document.getElementById(classReqs[i][0] + "dep");
-				if(element) {
-					element.style.border = "2px solid #6A49A7";
-					element.style.backgroundColor = "white";
-				}
-				if(depElement) {
-					depElement.style.border = "2px solid #6A49A7";
-					depElement.style.backgroundColor = "white";
-				}
-				
-			}	
+			}
 		}
 		
 		// Changing tree properties
+		//refactored this as well
 		for(var i = 0; i < classes.length; i++) {
-			var element = document.getElementById(classes[i]);
-			var depElement = document.getElementById(classes[i] + "dep");
-			if(element) {
-				element.style.border = "2px solid #33cc33";
-				element.style.backgroundColor = "#adebad";
+			var elements = document.getElementsByClassName(classes[i]);
+			var depElements = document.getElementsByClassName(classes[i] + "dep");
+			if (elements) {
+				for (j = 0; j < elements.length; j++) {
+					elements[j].style.border = "2px solid #33cc33";
+					elements[j].style.backgroundColor = "#adebad";				
+				}				
 			}
-			if(depElement){
-				depElement.style.border = "2px solid #33cc33";
-				depElement.style.backgroundColor = "#adebad";
+			if (depElements) {
+				for (j = 0; j < depElements.length; j++) {
+					depElements[j].style.border = "2px solid #33cc33";
+					depElements[j].style.backgroundColor = "#adebad";				
+				}				
 			}
-			
 		}
 		
 		// Special ids for joint class nodes
