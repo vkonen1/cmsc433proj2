@@ -348,7 +348,7 @@ $classReqs = $db->fetchAllReqs();
             <div class="tree">
                 <ul>
                     <li>
-                        <a href="#">Science courses</a>
+                        <a href="#">Sciences</a>
                         <ul>
                             <li>
                                 <span id="no-prereq" href="#">No Prereqs <br />
@@ -357,10 +357,8 @@ $classReqs = $db->fetchAllReqs();
                                     <a class="GES120" href="#">GES 120</a> <br />
                                 </span>
                             </li>
-
                             <li>
-                                <a href="#">Math 151</a>
-                                <a class="Math151"></a>
+                                <a class="Math151">MATH 151</a>
                                 <ul>
                                     <li>
                                         <a class="CHEM101">CHEM 101</a>
@@ -375,12 +373,6 @@ $classReqs = $db->fetchAllReqs();
                                             </li>
                                         </ul>
                                     </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Math 151</a>
-                                <a class="Math151"></a>
-                                <ul>
                                     <li>
                                         <a class="BIOL141">BIOL 141</a>
                                          <ul>
@@ -392,6 +384,26 @@ $classReqs = $db->fetchAllReqs();
                                                 <ul>
                                                     <li>
                                                         <a class="BIOL275L">BIOL 275L</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span id="152_121">
+                                            <a class="MATH152">MATH 152</a><br />
+                                            <a class="PHYS121">PHYS 121</a>
+                                        </span>
+                                         <ul>
+                                            <li>
+                                                <a class="PHYS122">PHYS 122</a>
+                                                <ul>
+                                                    <li>
+                                                        <span id="122L_224_304">
+                                                            <a class="PHYS122L">PHYS 122L</a><br />
+                                                            <a class="PHYS224">PHYS 224</a><br />
+                                                            <a class="PHYS304">PHYS 304</a><br />
+                                                        </span>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -453,7 +465,7 @@ $classReqs = $db->fetchAllReqs();
             <div class="tree">
                 <ul>
                     <li>
-                        <a href="Science Labs">Science Labs</a>
+                        <a href="Biology_Labs">Biology Labs</a>
                         <ul>
                             <li>
                                 <a class="CHEM102L_BIOL302">CHEM 102L & BIOL 302</a>
