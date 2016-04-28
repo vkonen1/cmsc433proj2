@@ -323,32 +323,19 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 			
-					<li>
-									<a id="CMSC225">MATH 225</a>
-										<ul>
-											<li>
-												<a id="MATH225" onclick="toggleClass('MATH225')">MATH 225</a> 
-											</li>
-										</ul>
-								</li>
+			
 								
 								
 				<br />
+				
+				
 				 <div class="tree">
                 <ul>
                     <li>
                         <a>Other Math</a>
                         <ul>
 						
-									<li>
-												<a id="CMSC225">MATH 225</a>
-													<ul>
-														<li>
-															<a id="MATH225" onclick="toggleClass('MATH225')">MATH 225</a> 
-														</li>
-													</ul>
-									</li>
-								
+						
 						
 						
                         </ul>
