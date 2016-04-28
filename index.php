@@ -349,101 +349,104 @@ $classReqs = $db->fetchAllReqs();
                 <ul>
                     <li>
                         <a href="#">Science courses</a>
-                        <li>
-                            <span id="no-prereq" href="#">No Prereqs <br />
-                                <a class="GES110" href="#">GES 110</a> <br />
-                                <a class="GES111" href="#">GES 111</a> <br />
-                                <a class="GES120" href="#">GES 120</a> <br />
-                            </span>
-                        </li>
-                        <li>
-                            <a href="#">Math 151</a>
-                            <a class="Math151"></a>
-                            <ul>
-                                <li>
-                                    <a class="CHEM101">CHEM 101</a>
-                                     <ul>
-                                        <li>
-                                            <a class="CHEM102">CHEM 102</a>
-                                            <ul>
-                                                <li>
-                                                    <a class="CHEM102L">CHEM 102L</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Math 151</a>
-                            <a class="Math151"></a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL141">BIOL 141</a>
-                                     <ul>
-                                        <li>
-                                            <span id="142_275">
-                                                <a class="BIOL142">BIOL 142</a><br />
-                                                <a class="BIOL275">BIOL 275</a>
-                                            </span>
-                                            <ul>
-                                                <li>
-                                                    <a class="BIOL275L">BIOL 275L</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="102_141">Chem 102 & Biol 141</a>
-                            <ul>
-                                <li> 
-                                    <a class="BIOL251">BIOL 251</a>
-                                    <ul>
-                                        <li> 
-                                            <span>
-                                                <a class="BIOL251L">BIOL 251L</a><br />
-                                                <a class="BIOL252">BIOL 252</a>
-                                            </span>
-                                            <ul>
-                                                <li> 
-                                                    <a class="BIOL252L">BIOL 252L</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="151_102_141_142">MATH 151 & CHEM 102<br />BIOL 141 & BIOL 142</a>
-                            <ul>
-                                <li> 
-                                    <a class="BIOL302">BIOL 302</a>
-                                    <ul>
-                                        <li> 
-                                            <a class="BIOL303">BIOL 303</a>
-                                            <ul>
-                                                <li> 
-                                                    <a class="BIOL304">BIOL 304</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a clas="303_122">BIOL 303 & PHYS 122</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL305">BIOL 305</a>
-                                </li>
-                            </ul>
-                        </li>
+                        <ul>
+                            <li>
+                                <span id="no-prereq" href="#">No Prereqs <br />
+                                    <a class="GES110" href="#">GES 110</a> <br />
+                                    <a class="GES111" href="#">GES 111</a> <br />
+                                    <a class="GES120" href="#">GES 120</a> <br />
+                                </span>
+                            </li>
+
+                            <li>
+                                <a href="#">Math 151</a>
+                                <a class="Math151"></a>
+                                <ul>
+                                    <li>
+                                        <a class="CHEM101">CHEM 101</a>
+                                         <ul>
+                                            <li>
+                                                <a class="CHEM102">CHEM 102</a>
+                                                <ul>
+                                                    <li>
+                                                        <a class="CHEM102L">CHEM 102L</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Math 151</a>
+                                <a class="Math151"></a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL141">BIOL 141</a>
+                                         <ul>
+                                            <li>
+                                                <span id="142_275">
+                                                    <a class="BIOL142">BIOL 142</a><br />
+                                                    <a class="BIOL275">BIOL 275</a>
+                                                </span>
+                                                <ul>
+                                                    <li>
+                                                        <a class="BIOL275L">BIOL 275L</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="102_141">Chem 102 & Biol 141</a>
+                                <ul>
+                                    <li> 
+                                        <a class="BIOL251">BIOL 251</a>
+                                        <ul>
+                                            <li> 
+                                                <span>
+                                                    <a class="BIOL251L">BIOL 251L</a><br />
+                                                    <a class="BIOL252">BIOL 252</a>
+                                                </span>
+                                                <ul>
+                                                    <li> 
+                                                        <a class="BIOL252L">BIOL 252L</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="151_102_141_142">MATH 151 & CHEM 102<br />BIOL 141 & BIOL 142</a>
+                                <ul>
+                                    <li> 
+                                        <a class="BIOL302">BIOL 302</a>
+                                        <ul>
+                                            <li> 
+                                                <a class="BIOL303">BIOL 303</a>
+                                                <ul>
+                                                    <li> 
+                                                        <a class="BIOL304">BIOL 304</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a clas="303_122">BIOL 303 & PHYS 122</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL305">BIOL 305</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -451,46 +454,48 @@ $classReqs = $db->fetchAllReqs();
                 <ul>
                     <li>
                         <a href="Science Labs">Science Labs</a>
-                        <li>
-                            <a class="CHEM102L_BIOL302">CHEM 102L & BIOL 302</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL300L">BIOL 300L</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="302_300L">BIOL 302 & 300L</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL302L">BIOL 302L</a>
-                                </li>   
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="303_300L">BIOL 303 & 300L</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL303L">BIOL 303L</a>
-                                </li>   
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="304_300L">BIOL 304 & 300L</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL304L">BIOL 304L</a>
-                                </li>   
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="305_300L">BIOL 305 & 300L</a>
-                            <ul>
-                                <li>
-                                    <a class="BIOL305L">BIOL 305L</a>
-                                </li>   
-                            </ul>
-                        </li>
+                        <ul>
+                            <li>
+                                <a class="CHEM102L_BIOL302">CHEM 102L & BIOL 302</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL300L">BIOL 300L</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="302_300L">BIOL 302 & 300L</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL302L">BIOL 302L</a>
+                                    </li>   
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="303_300L">BIOL 303 & 300L</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL303L">BIOL 303L</a>
+                                    </li>   
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="304_300L">BIOL 304 & 300L</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL304L">BIOL 304L</a>
+                                    </li>   
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="305_300L">BIOL 305 & 300L</a>
+                                <ul>
+                                    <li>
+                                        <a class="BIOL305L">BIOL 305L</a>
+                                    </li>   
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
