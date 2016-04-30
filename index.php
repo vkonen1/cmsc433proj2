@@ -145,8 +145,8 @@ $classReqs = $db->fetchAllReqs();
 												<ul>
 													<li>
 														<span class="CMSC341dep">CMSC 341 <br /> Dependants <br />
-															<a class="CMSC436" onclick="toggleClass('CMSC436')">CMSC 436</a> 
-															<a class="CMSC475" onclick="toggleClass('CMSC475')">CMSC 475</a> <br/>
+															<a class="CMSC436" onclick="toggleClass('CMSC436')">CMSC 436</a> <br />
+															<a class="CMSC475" onclick="toggleClass('CMSC475')">CMSC 475</a> <br />
 															<a class="CMSC476" onclick="toggleClass('CMSC476')">CMSC 476</a>  
 														</span>
 													</li>
@@ -367,10 +367,104 @@ $classReqs = $db->fetchAllReqs();
                     <li>
                         <a>Additional Math</a>
                         <ul>
-						
-						
-						
-						
+                        	<li>
+								<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a>
+                                <ul>
+                                    <li>                                                                           
+                                    	<span class="MATH152dep"> Dependants <br />
+                                            <a class="MATH225" onclick="toggleClass('MATH225')">MATH 225</a> <br />
+                                            <a class="MATH251" onclick="toggleClass('MATH251')">MATH 251</a>
+                                        </span>                                          
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                            	<span> Pre-Reqs <br />
+									<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a> <br />
+									<a class="MATH221" onclick="toggleClass('MATH221')">MATH 221</a>
+                                </span>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH301" onclick="toggleClass('MATH301')">MATH 301</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+								<a class="MATH221" onclick="toggleClass('MATH221')">MATH 221</a>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH381" onclick="toggleClass('MATH381')">MATH 381</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                            	<span> Pre-Reqs <br />
+									<a class="MATH251" onclick="toggleClass('MATH251')">MATH 251</a> <br />
+									<a class="MATH301" onclick="toggleClass('MATH301')">MATH 301</a>  
+                                </span>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH430" onclick="toggleClass('MATH430')">MATH 430</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+    						<li>
+                            	<span> Pre-Reqs <br />
+                            		<a class="required CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> <br /> 
+                            		<a class="MATH225" onclick="toggleClass('MATH225')">MATH 225</a> <br /> 
+									<a class="MATH251" onclick="toggleClass('MATH251')">MATH 251</a> <br />
+									<a class="MATH301" onclick="toggleClass('MATH301')">MATH 301</a>  
+                                </span>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH441" onclick="toggleClass('MATH441')">MATH 441</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+								<a class="STAT355" onclick="toggleClass('STAT355')">STAT 355</a>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH452" onclick="toggleClass('MATH452')">MATH 452</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+								<a class="MATH301" onclick="toggleClass('MATH301')">MATH 301</a> 
+                                <ul>
+                                    <li>  
+                                        <a class="MATH475" onclick="toggleClass('MATH475')">MATH 475</a>               
+                                    </li>
+                                </ul>
+                            </li>
+
+    						<li>
+                            	<span> Pre-Reqs <br />
+                            		<a class="MATH221" onclick="toggleClass('MATH221')">MATH 221</a> <br /> 
+									<a class="MATH225" onclick="toggleClass('MATH225')">MATH 225</a> <br />
+									<a class="MATH251" onclick="toggleClass('MATH251')">MATH 251</a>  
+                                </span>
+                                <ul>
+                                    <li>  
+                                        <a class="MATH481" onclick="toggleClass('MATH481')">MATH 481</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+    						<li>
+								<a class="MATH381" onclick="toggleClass('MATH381')">MATH 381</a> 
+                                <ul>
+                                    <li>  
+                                        <a class="MATH483" onclick="toggleClass('MATH483')">MATH 483</a>               
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                 </ul>
