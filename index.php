@@ -88,7 +88,6 @@ $classReqs = $db->fetchAllReqs();
         go ahead and use the special cases graph
         Doesn't react well to wrapping: breaks the graph
         -->
-        <div>
             <div class="tree">
                 <ul>
 						<li>

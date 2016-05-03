@@ -222,23 +222,27 @@ var classes = new Array(); // global array to manage classes entered
 			// and make sure the dependency tree is not colored
 			var elements = document.getElementsByClassName(classReqs[i][0]);
 			var depElements = document.getElementsByClassName(classReqs[i][0] + "dep");
-			for (var j = 0; j < elements.length; j++) {
-				if (addClass) {
-					elements[j].style.border = "2px solid #ffff00";
-					elements[j].style.backgroundColor = "#ffff44";
-				} else {
-					elements[j].style.border = "2px solid #6A49A7";
-					elements[j].style.backgroundColor = "white";
-				}			
+			if (elements) {
+				for (var j = 0; j < elements.length; j++) {
+					if (addClass) {
+						elements[j].style.border = "2px solid #ffff00";
+						elements[j].style.backgroundColor = "#ffff44";
+					} else {
+						elements[j].style.border = "2px solid #6A49A7";
+						elements[j].style.backgroundColor = "white";
+					}			
+				}				
 			}
-			for (var j = 0; j < depElements.length; j++) {
-				if (addClass) {
-					depElements[j].style.border = "2px solid #6A49A7";
-					depElements[j].style.backgroundColor = "white";						
-				} else {
-					depElement[j].style.border = "2px solid #6A49A7";
-					depElement[j].style.backgroundColor = "white";
-				}
+			if (depElements) {
+				for (var j = 0; j < depElements.length; j++) {
+					if (addClass) {
+						depElements[j].style.border = "2px solid #6A49A7";
+						depElements[j].style.backgroundColor = "white";						
+					} else {
+						depElements[j].style.border = "2px solid #6A49A7";
+						depElements[j].style.backgroundColor = "white";
+					}
+				}				
 			}
 		}
 		
