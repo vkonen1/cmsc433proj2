@@ -145,6 +145,7 @@ $classReqs = $db->fetchAllReqs();
 												<ul>
 													<li>
 														<span class="CMSC341dep">CMSC 341 <br /> Dependants <br />
+															<a class="CMSC427" onclick="toggleClass('CMSC427')">CMSC 427</a> <br />
 															<a class="CMSC436" onclick="toggleClass('CMSC436')">CMSC 436</a> <br />
 															<a class="CMSC475" onclick="toggleClass('CMSC475')">CMSC 475</a> <br />
 															<a class="CMSC476" onclick="toggleClass('CMSC476')">CMSC 476</a>  
@@ -185,12 +186,6 @@ $classReqs = $db->fetchAllReqs();
                     <li>
                         <a>Multiple dependancies <br /> and special cases</a>
                         <ul>
-                            <li>
-                                <span id="no-prereq">No Prereqs <br />
-                                    <a class="CMSC427" onclick="toggleClass('CMSC427')">CMSC 427</a> <br />
-                                </span>                                
-                            </li>
-							
                             <li>
                                 <span> Pre-Reqs <br />
 									<a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a> <br/> 
