@@ -105,9 +105,7 @@ $classReqs = $db->fetchAllReqs();
 										<ul>
 											<li>
 												<span class="CMSC203dep" >CMSC 203 <br /> Dependants <br />
-													<a class="CMSC451" onclick="toggleClass('CMSC451')">CMSC 451</a> <br />
 													<a class="CMSC452" onclick="toggleClass('CMSC452')">CMSC 452</a> <br />
-													<a class="CMSC457" onclick="toggleClass('CMSC457')">CMSC 457</a>   <br />
 												</span>
 											</li>
 											<li>
@@ -133,7 +131,6 @@ $classReqs = $db->fetchAllReqs();
 												<ul>
 													<li>
 														<span class="CMSC331dep" >CMSC 331 <br /> Dependants <br />
-															<a class="CMSC432" onclick="toggleClass('CMSC432')">CMSC 432</a> <br />
 															<a class="CMSC433" onclick="toggleClass('CMSC433')">CMSC 433</a> <br />
 															<a class="CMSC473" onclick="toggleClass('CMSC473')">CMSC 473</a>
 														</span>
@@ -186,12 +183,40 @@ $classReqs = $db->fetchAllReqs();
                     <li>
                         <a>Multiple dependancies <br /> and special cases</a>
                         <ul>
+                        	<li>
+                                <span> Pre-Reqs <br />
+									<a class="required CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> <br/> 
+									<a class="required CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a> 
+								</span>
+                                <ul>
+                                    <li>                                                                           
+                                        <a class="CMSC451" onclick="toggleClass('CMSC451')">CMSC 451</a>                      
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <span> Pre-Reqs <br />
+									<a class="required CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a> <br/> 
+									<a class="required MATH221" onclick="toggleClass('MATH221')">MATH 221</a> 
+								</span>
+                                <ul>
+                                    <li>                                                                           
+                                        <a class="CMSC457" onclick="toggleClass('CMSC457')">CMSC 457</a>                  
+                                    </li>
+                                </ul>
+                            </li>
+
+
                             <li>
                                 <span> Pre-Reqs <br />
 									<a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a> <br/> 
 									<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a> 
 								</span>
                                 <ul>
+                                	 <li>
+                                		<a class="CMSC432" onclick="toggleClass('CMSC432')">CMSC 432</a>
+                                	</li>
                                     <li>                                                                           
                                         <a class="required CMSC421" onclick="toggleClass('CMSC421')">CMSC 421</a>
                                         <ul>
