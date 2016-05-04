@@ -33,12 +33,17 @@ var classes = new Array(); // global array to manage classes entered
 	function toggleClass(className) {
 		var type;
 		var num;
+		//console.log(className);
 		if (className.indexOf("CMSC") == 0 || className.indexOf("MATH") == 0) {
 			type = className.substring(0, 4);
 			num = className.substring(4);
+			//console.log(type);
+			//console.log(num);
 		} else {
 			type = className.substring(0, 3);
 			num = className.substring(3);
+			//console.log(type);
+			//console.log(num);
 		}
 
 		var toggle_ar = true;
@@ -49,8 +54,10 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 
-		document.getElementsByName("department")[0].value = type
-		document.getElementsByName("coursenumber")[0].value = num;
+		document.getElementsByName("department").value = type;
+		document.getElementsByName("coursenumber").value = num;
+
+
 
 		if (toggle_ar) {
 			updateClasses("addClass");
@@ -79,10 +86,12 @@ var classes = new Array(); // global array to manage classes entered
 		} else {
 			
 			// Getting relevent data
-			var dept = document.getElementsByName("department")[0].value;
-			var number = document.getElementsByName("coursenumber")[0].value;
+			var dept = document.getElementsByName("department").value;
+			var number = document.getElementsByName("coursenumber").value;
 			var classString = (dept.concat(number)).toUpperCase();
 			
+			//console.log("classString"+dept);
+
 			// Verify the proper form was used
 			if(!/[1-4][0-9]{2}/.test(number)) {
 				alert("Please enter class number between 200 and 499 in the form: ###");
@@ -162,6 +171,7 @@ var classes = new Array(); // global array to manage classes entered
 	 	var divHTML = "";
 	 	for(var i = 0; i < classes.length; i++) {
 		 	string = "<span class='course'>" + classes[i] + "</span> ";
+		 	//console.log(classes[i]);
 		 	divHTML = divHTML + string;
 		}
 		div.innerHTML = divHTML;
@@ -265,31 +275,33 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 		
+
+		
 		// Special ids for joint class nodes
 		// id="313_341"
 		if(classes.indexOf('CMSC313') != -1 && classes.indexOf('CMSC341') != -1) {
-			var element = document.getElementById("313_341");
+			//var element = document.getElementById("313_341");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="435_471"
 		if(classes.indexOf('CMSC435') != -1 && classes.indexOf('CMSC471') != -1) {
-			var element = document.getElementById("435_471");
+			//var element = document.getElementById("435_471");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="421_481"
 		if(classes.indexOf('CMSC421') != -1 && classes.indexOf('CMSC481') != -1) {
-			var element = document.getElementById("421_481");
+			//var element = document.getElementById("421_481");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
 		
 		// id="461_481"
 		if(classes.indexOf('CMSC461') != -1 && classes.indexOf('CMSC481') != -1) {
-			var element = document.getElementById("461_481");
+			//var element = document.getElementById("461_481");
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
