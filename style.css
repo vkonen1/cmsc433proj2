@@ -12,6 +12,7 @@ body
 {
     overflow-x: hidden;
     background-color: #F5CA5C;
+    height:0;
 }
 a
 {
@@ -145,6 +146,11 @@ a.submitLink:hover
 	color: #00e600;
 }
 
+
+#oldClassInput
+{
+    display: none;
+}
 
 
 /*Tree Css*/ 

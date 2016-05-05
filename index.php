@@ -24,22 +24,24 @@ $classReqs = $db->fetchAllReqs();
         <div style="float: left;">
             <!--Two forms for submission handling-->
             <!--All field names match their corresponding title in the database-->
+            <div id="oldClassInput">
             <!--Course Info section-->
-            <form class="courseinfo" method="post" onsubmit="return updateClasses(this.submitted);">
-                Enter Class:
-                <select name="department" value="">
-                    <!--Most of the classes chosen will be in one of these departments-->
-                    <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
-                    <option value="cmsc" selected="selected">CMSC</option>
-                    <option value="math">MATH</option>
-                    <option value="stat">SCI</option>
-                </select>*
-                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###"></input>*
-                <br/>
-                <input name="addClass" type="submit" value="Add Class" onclick="this.form.submitted = this.name;"></input>
-                <input name="removeClass" type="submit" value="Remove Class" onclick="this.form.submitted = this.name"></input><br/>
-                <input name="courseClear" type="submit" value="Clear Classes" onclick="this.form.submitted = this.name"></input>
-            </form>
+	            <form class="courseinfo" method="post" onsubmit="return updateClasses(this.submitted);">
+	                Enter Class:
+	                <select name="department" value="">
+	                    <!--Most of the classes chosen will be in one of these departments-->
+	                    <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
+	                    <option value="cmsc" selected="selected">CMSC</option>
+	                    <option value="math">MATH</option>
+	                    <option value="stat">SCI</option>
+	                </select>*
+	                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###"></input>*
+	                <br/>
+	                <input name="addClass" type="submit" value="Add Class" onclick="this.form.submitted = this.name;"></input>
+	                <input name="removeClass" type="submit" value="Remove Class" onclick="this.form.submitted = this.name"></input><br/>
+	                <input name="courseClear" type="submit" value="Clear Classes" onclick="this.form.submitted = this.name"></input>
+	            </form>
+            </div>
 
             <!-- Contains the legend for the tree, and a dynamically generated list
             of which classes the user has entered. -->
@@ -88,46 +90,6 @@ $classReqs = $db->fetchAllReqs();
         go ahead and use the special cases graph
         Doesn't react well to wrapping: breaks the graph
         -->
-        <div class="tree">
-                <ul>
-						<li>
-							<span>
-								SPACE<br />
-								SPACE<br />
-								SPACE<br />
-								SPACE<br />
-								SPACE<br />
-								SPACE<br />
-						   </span>
-						   <ul>
-								<li>
-									<span>
-										SPACE<br />
-										SPACE<br />
-										SPACE<br />
-										SPACE<br />
-										SPACE<br />
-										SPACE<br />
-						  			 </span>
-						   			<ul>
-										<li>
-										<span>
-											SPACE<br />
-											SPACE<br />
-											SPACE<br />
-											SPACE<br />
-											SPACE<br />
-											SPACE<br />
-						   				</span>
-										</li>
-               					 	</ul>
-								</li>
-                			</ul>
-						</li>
-                </ul>
-            </div>
-
-
             <div class="tree">
                 <ul>
 					<li>
