@@ -490,7 +490,7 @@ $classReqs = $db->fetchAllReqs();
 											<a class="CMSC484" onclick="toggleClass('CMSC484')">CMSC 484</a> <br />
 										</span>
 									</li>
-								</ul>>
+								</ul>
 							</li>
                             <li>
 								<span> Pre-Reqs <br />
