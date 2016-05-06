@@ -441,9 +441,7 @@ $classReqs = $db->fetchAllReqs();
 								</span>
 									<ul>
 										<li>
-											<span class="CMSC341MATH152MATH221dep"> Dependants <br />
 											<a class="CMSC453" onclick="toggleClass('CMSC453')">CMSC 453</a>
-											</span>
 										</li>
 									</ul>
 							</li>
@@ -485,9 +483,14 @@ $classReqs = $db->fetchAllReqs();
 									</ul>                                    
 							</li> 
 							<li>
-								<span class="CMSC202dep" >CMSC 202 <br /> Dependants <br />
-									<a class="CMSC484" onclick="toggleClass('CMSC484')">CMSC 484</a> <br />
-								</span>
+								<a class="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a>
+								<ul>
+									<li>
+										<span class="CMSC202dep" >CMSC 202 <br /> Dependants <br />
+											<a class="CMSC484" onclick="toggleClass('CMSC484')">CMSC 484</a> <br />
+										</span>
+									</li>
+								</ul>>
 							</li>
                             <li>
 								<span> Pre-Reqs <br />
