@@ -308,7 +308,7 @@ var classes = new Array(); // global array to manage classes entered
 		
 		// id="any400"
 		for(var i = 0; i < classes.length; i++) {
-			if(classes[i].match(/4[0-9][0-9]/) != null) {
+			if(classes[i].match(/4[0-9][0-9]/) != null && classes.indexOf('CMSC341') != -1) {
 				var element = document.getElementById("any400");
 				element.style.border = "2px solid #33cc33";
 				element.style.backgroundColor = "#adebad";
