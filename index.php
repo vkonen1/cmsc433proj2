@@ -35,11 +35,11 @@ $classReqs = $db->fetchAllReqs();
 	                    <option value="math">MATH</option>
 	                    <option value="stat">SCI</option>
 	                </select>*
-	                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###"></input>*
+	                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###" />*
 	                <br/>
-	                <input name="addClass" type="submit" value="Add Class" onclick="this.form.submitted = this.name;"></input>
-	                <input name="removeClass" type="submit" value="Remove Class" onclick="this.form.submitted = this.name"></input><br/>
-	                <input name="courseClear" type="submit" value="Clear Classes" onclick="this.form.submitted = this.name"></input>
+	                <input name="addClass" type="submit" value="Add Class" onclick="this.form.submitted = this.name;" />
+	                <input name="removeClass" type="submit" value="Remove Class" onclick="this.form.submitted = this.name" /><br/>
+	                <input name="courseClear" type="submit" value="Clear Classes" onclick="this.form.submitted = this.name" />
 	            </form>
             </div>
 
@@ -60,25 +60,26 @@ $classReqs = $db->fetchAllReqs();
             <form method="post" class="userinfo" action="submit.php" onsubmit="validate();">
                 Name:<br/>
                 <!--Name is split up into seperate fields because that is how it is set up in the database-->
-                <input type="text" name="fname" required="required" placeholder="First Name" size="16"></input>*
-                <input type="text" name="minitial" required="required" placeholder="MI" size="1"></input>*
-                <input type="text" name="lname" required="required" placeholder="Last Name" size="16"></input>*<br/>
+                <input type="text" name="fname" required="required" placeholder="First Name" size="16" />*
+                <input type="text" name="minitial" required="required" placeholder="MI" size="1" />*
+                <input type="text" name="lname" required="required" placeholder="Last Name" size="16" />*<br/>
                 
                 Campus ID:<br/>
-                <input type="text" name="SID" required="required" pattern="[A-Za-z]{2}[0-9]{5}" title="Enter in the form XX#####"></input>*<br/>
+                <input type="text" name="SID" required="required" pattern="[A-Za-z]{2}[0-9]{5}" title="Enter in the form XX#####" />*<br/>
                 
                 Email (Best to contact):<br/>
                 <!--Reminder: Using the email type does most of the error checking for us-->
                 <!--The email type checks to make sure the input is of the pattern something@something-->
-                <input type="email" name="email" required="required" title="Please enter a valid email address"></input>*<br/>
+                <input type="email" name="email" required="required" title="Please enter a valid email address" />*<br/>
                 Phone Number (Best to contact):<br/>
-                <input type="text" name="phone1" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###"></input> -
-                <input type="text" name="phone2" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###"></input> -
-                <input type="text" name="phone3" required="required" size="4" maxlength="4" pattern="[0-9]{4}" title="Please enter in the form: ####"></input>*<br/>
-                <input type="submit" name="submit" value="Save Information" class="finalsubmit"></input>
-                <input type="hidden" name="classes" value=""></input>
+                <input type="text" name="phone1" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###" /> -
+                <input type="text" name="phone2" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###" /> -
+                <input type="text" name="phone3" required="required" size="4" maxlength="4" pattern="[0-9]{4}" title="Please enter in the form: ####" />*<br/>
+                <input type="submit" name="submit" value="Save Information" class="finalsubmit" />
+                <input type="hidden" name="classes" value="" />
             </form>
         </div>
+        <div class="clear"></div>
 
         <!--
         formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
