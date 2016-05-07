@@ -166,6 +166,7 @@ div.tree
 {
 	position: relative;
 	z-index: -1;
+    height: 0;
 }
 
 /* this styles the list tags to be receptive to what we're going to do later */
