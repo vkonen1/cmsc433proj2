@@ -118,8 +118,9 @@ $classReqs = $db->fetchAllReqs();
 															<li>
 																<a class="CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a> 
 															</li>
-														</ul>													</span>
+														</ul>
 													</span>
+                                                </span>
 												<ul>
 
 													<li>
@@ -646,42 +647,42 @@ $classReqs = $db->fetchAllReqs();
             <div class="tree">
                 <ul>
                     <li>
-                        <a href="#">Sciences</a>
+                        <a>Sciences</a>
                         <ul>
                             <li>
-                                <span id="no-prereq" href="#">No Prereqs <br />
-                                    <a class="GES110" href="#">GES 110</a> <br />
-                                    <a class="GES111" href="#">GES 111</a> <br />
-                                    <a class="GES120" href="#">GES 120</a> <br />
+                                <span id="no-prereq">No Prereqs <br />
+                                    <a class="GES110" onclick="toggleClass('GES110')">GES 110</a> <br />
+                                    <a class="GES111" onclick="toggleClass('GES111')">GES 111</a> <br />
+                                    <a class="GES120" onclick="toggleClass('GES120')">GES 120</a> <br />
                                 </span>
                             </li>
                             <li>
-                                <a class="Math151">MATH 151</a>
+                                <a class="MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
                                 <ul>
                                     <li>
-                                        <a class="CHEM101">CHEM 101</a>
+                                        <a class="CHEM101" onclick="toggleClass('CHEM101')">CHEM 101</a>
                                          <ul>
                                             <li>
-                                                <a class="CHEM102">CHEM 102</a>
+                                                <a class="CHEM102" onclick="toggleClass('CHEM102')">CHEM 102</a>
                                                 <ul>
                                                     <li>
-                                                        <a class="CHEM102L">CHEM 102L</a>
+                                                        <a class="CHEM102L" onclick="toggleClass('CHEM102L')">CHEM 102L</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a class="BIOL141">BIOL 141</a>
+                                        <a class="BIOL141" onclick="toggleClass('BIOL141')">BIOL 141</a>
                                          <ul>
                                             <li>
                                                 <span id="142_275">
-                                                    <a class="BIOL142">BIOL 142</a><br />
-                                                    <a class="BIOL275">BIOL 275</a>
+                                                    <a class="BIOL142" onclick="toggleClass('BIOL142')">BIOL 142</a><br />
+                                                    <a class="BIOL275" onclick="toggleClass('BIOL275')">BIOL 275</a>
                                                 </span>
                                                 <ul>
                                                     <li>
-                                                        <a class="BIOL275L">BIOL 275L</a>
+                                                        <a class="BIOL275L" onclick="toggleClass('BIOL275L')">BIOL 275L</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -689,18 +690,18 @@ $classReqs = $db->fetchAllReqs();
                                     </li>
                                     <li>
                                         <span id="152_121">
-                                            <a class="MATH152">MATH 152</a><br />
-                                            <a class="PHYS121">PHYS 121</a>
+                                            <a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a><br />
+                                            <a class="PHYS121" onclick="toggleClass('PHYS121')">PHYS 121</a>
                                         </span>
                                          <ul>
                                             <li>
-                                                <a class="PHYS122">PHYS 122</a>
+                                                <a class="PHYS122" onclick="toggleClass('PHYS122')">PHYS 122</a>
                                                 <ul>
                                                     <li>
                                                         <span id="122L_224_304">
-                                                            <a class="PHYS122L">PHYS 122L</a><br />
-                                                            <a class="PHYS224">PHYS 224</a><br />
-                                                            <a class="PHYS304">PHYS 304</a><br />
+                                                            <a class="PHYS122L" onclick="toggleClass('PHYS122L')">PHYS 122L</a><br />
+                                                            <a class="PHYS224" onclick="toggleClass('PHYS224')">PHYS 224</a><br />
+                                                            <a class="PHYS304" onclick="toggleClass('PHYS304')">PHYS 304</a><br />
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -710,19 +711,22 @@ $classReqs = $db->fetchAllReqs();
                                 </ul>
                             </li>
                             <li>
-                                <a class="102_141">Chem 102 & Biol 141</a>
+                                <span>
+                                    <a class="CHEM102" onclick="toggleClass('CHEM102')">CHEM 102</a><br />
+                                    <a class="BIOL141" onclick="toggleClass('BIOL141')">BIOL 141</a>                                    
+                                </span>
                                 <ul>
                                     <li> 
-                                        <a class="BIOL251">BIOL 251</a>
+                                        <a class="BIOL251" onclick="toggleClass('BIOL251')">BIOL 251</a>
                                         <ul>
                                             <li> 
                                                 <span>
-                                                    <a class="BIOL251L">BIOL 251L</a><br />
-                                                    <a class="BIOL252">BIOL 252</a>
+                                                    <a class="BIOL251L" onclick="toggleClass('BIOL251L')">BIOL 251L</a><br />
+                                                    <a class="BIOL252" onclick="toggleClass('BIOL252')">BIOL 252</a>
                                                 </span>
                                                 <ul>
                                                     <li> 
-                                                        <a class="BIOL252L">BIOL 252L</a>
+                                                        <a class="BIOL252L" onclick="toggleClass('BIOL252L')">BIOL 252L</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -731,16 +735,21 @@ $classReqs = $db->fetchAllReqs();
                                 </ul>
                             </li>
                             <li>
-                                <a class="151_102_141_142">MATH 151 & CHEM 102<br />BIOL 141 & BIOL 142</a>
+                                <span>
+                                    <a class="MATH151" onclick="toggleClass('MATH151')">MATH 151</a><br />
+                                    <a class="CHEM102" onclick="toggleClass('CHEM102')">CHEM 102</a><br />
+                                    <a class="BIOL141" onclick="toggleClass('BIOL141')">BIOL 141</a><br />
+                                    <a class="BIOL142" onclick="toggleClass('BIOL142')">BIOL 142</a>                                    
+                                </span>
                                 <ul>
                                     <li> 
-                                        <a class="BIOL302">BIOL 302</a>
+                                        <a class="BIOL302" onclick="toggleClass('BIOL302')">BIOL 302</a>
                                         <ul>
                                             <li> 
-                                                <a class="BIOL303">BIOL 303</a>
+                                                <a class="BIOL303" onclick="toggleClass('BIOL303')">BIOL 303</a>
                                                 <ul>
                                                     <li> 
-                                                        <a class="BIOL304">BIOL 304</a>
+                                                        <a class="BIOL304" onclick="toggleClass('BIOL304')">BIOL 304</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -749,10 +758,14 @@ $classReqs = $db->fetchAllReqs();
                                 </ul>
                             </li>
                             <li>
-                                <a clas="303_122">BIOL 303 & PHYS 122</a>
+                                <span>
+                                    <a class="BIOL303" onclick="toggleClass('BIOL303')">BIOL 303</a><br />
+                                    <a class="PHYS122" onclick="toggleClass('PHYS122')">PHYS 122</a>
+                                    
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL305">BIOL 305</a>
+                                        <a class="BIOL305" onclick="toggleClass('BIOL305')">BIOL 305</a>
                                     </li>
                                 </ul>
                             </li>
@@ -763,45 +776,60 @@ $classReqs = $db->fetchAllReqs();
             <div class="tree">
                 <ul>
                     <li>
-                        <a href="Biology_Labs">Biology Labs</a>
+                        <a>Biology Labs</a>
                         <ul>
                             <li>
-                                <a class="CHEM102L_BIOL302">CHEM 102L & BIOL 302</a>
+                                <span>
+                                    <a class="CHEM102L" onclick="toggleClass('CHEM102L')">CHEM 102L</a><br />
+                                    <a class="BIOL302" onclick="toggleClass('BIOL302')">BIOL 302</a>
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL300L">BIOL 300L</a>
+                                        <a class="BIOL300L" onclick="toggleClass('BIOL300L')">BIOL 300L</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a class="302_300L">BIOL 302 & 300L</a>
+                                <span>
+                                    <a class="BIOL302" onclick="toggleClass('BIOL302')">BIOL 302</a><br />
+                                    <a class="BIOL300L" onclick="toggleClass('BIOL300L')">BIOL 300L</a>
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL302L">BIOL 302L</a>
+                                        <a class="BIOL302L" onclick="toggleClass('BIOL302L')">BIOL 302L</a>
                                     </li>   
                                 </ul>
                             </li>
                             <li>
-                                <a class="303_300L">BIOL 303 & 300L</a>
+                                <span>
+                                    <a class="BIOL303" onclick="toggleClass('BIOL303')">BIOL 303</a><br />
+                                    <a class="BIOL300L" onclick="toggleClass('BIOL300L')">BIOL 300L</a>
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL303L">BIOL 303L</a>
+                                        <a class="BIOL303L" onclick="toggleClass('BIOL303L')">BIOL 303L</a>
                                     </li>   
                                 </ul>
                             </li>
                             <li>
-                                <a class="304_300L">BIOL 304 & 300L</a>
+                                <span>
+                                    <a class="BIOL304" onclick="toggleClass('BIOL304')">BIOL 304</a><br />
+                                    <a class="BIOL300L" onclick="toggleClass('BIOL300L')">BIOL 300L</a>
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL304L">BIOL 304L</a>
+                                        <a class="BIOL304L" onclick="toggleClass('BIOL304L')">BIOL 304L</a>
                                     </li>   
                                 </ul>
                             </li>
                             <li>
-                                <a class="305_300L">BIOL 305 & 300L</a>
+                                <span>
+                                    <a class="BIOL305" onclick="toggleClass('BIOL305')">BIOL 305</a><br />
+                                    <a class="BIOL300L" onclick="toggleClass('BIOL300L')">BIOL 300L</a>
+                                </span>
                                 <ul>
                                     <li>
-                                        <a class="BIOL305L">BIOL 305L</a>
+                                        <a class="BIOL305L" onclick="toggleClass('BIOL305L')">BIOL 305L</a>
                                     </li>   
                                 </ul>
                             </li>
