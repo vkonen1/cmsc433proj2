@@ -54,8 +54,8 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 
-		document.getElementsByName("department").value = type;
-		document.getElementsByName("coursenumber").value = num;
+		document.getElementsByName("department")[0].value = type;
+		document.getElementsByName("coursenumber")[0].value = num;
 
 
 
@@ -86,11 +86,11 @@ var classes = new Array(); // global array to manage classes entered
 		} else {
 			
 			// Getting relevent data
-			var dept = document.getElementsByName("department").value;
-			var number = document.getElementsByName("coursenumber").value;
+			var dept = document.getElementsByName("department")[0].value;
+			var number = document.getElementsByName("coursenumber")[0].value;
 			var classString = (dept.concat(number)).toUpperCase();
 			
-			//console.log("classString"+dept);
+			//console.log(classString);
 
 			// Verify the proper form was used
 			if(!/[1-4][0-9]{2}/.test(number)) {
@@ -276,7 +276,7 @@ var classes = new Array(); // global array to manage classes entered
 		}
 		
 
-		
+		/*
 		// Special ids for joint class nodes
 		// id="313_341"
 		if(classes.indexOf('CMSC313') != -1 && classes.indexOf('CMSC341') != -1) {
@@ -305,6 +305,7 @@ var classes = new Array(); // global array to manage classes entered
 			element.style.border = "2px solid #33cc33";
 			element.style.backgroundColor = "#adebad";
 		}
+		*/
 		
 		// id="any400"
 		for(var i = 0; i < classes.length; i++) {

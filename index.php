@@ -27,14 +27,19 @@ $classReqs = $db->fetchAllReqs();
             <div id="oldClassInput">
             <!--Course Info section-->
 	            <form class="courseinfo" method="post" onsubmit="return updateClasses(this.submitted);">
+	            	<!--Replaced this select with a input for our onclick function to work properly-->
+	            	<!--Most of the classes chosen will be in one of these departments-->
+	                <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
+	            	<!--
 	                Enter Class:
 	                <select name="department" value="">
-	                    <!--Most of the classes chosen will be in one of these departments-->
-	                    <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
 	                    <option value="cmsc" selected="selected">CMSC</option>
 	                    <option value="math">MATH</option>
 	                    <option value="stat">SCI</option>
 	                </select>
+	                -->
+
+	                <input type="text" name="department" title="Enter class type" />
 	                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###" />
 	                <br/>
 	                <input name="addClass" type="submit" value="Add Class" onclick="this.form.submitted = this.name;" />
