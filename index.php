@@ -102,107 +102,95 @@ $classReqs = $db->fetchAllReqs();
                 <ul>
 					<li>
 						<span class="required" id="CMSCGateway">CMSC Base Requirements</span>
-							<ul>
-								<li>
-									<span class="required" id="CMSCGateway">CMSC  <br /> 
-										<a class="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> <br />
-										<a class="MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
-								    </span>
+						<ul>
+							<li>
+								<span class="required" id="CMSCGateway">CMSC  <br /> 
+									<a class="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> <br />
+									<a class="MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
+							    </span>
+								<ul>
+									<li>
+										<span class="required" id="CMSCGateway">
+											<a class="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> <br />
+											<a class="CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a>
+										</span>
 										<ul>
 											<li>
-												<span class="required" id="CMSCGateway">
-													<a class="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> <br />
-													<a class="CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a>
-													</span>
+                                                <span>
+													<a class="CMSC304" onclick="toggleClass('CMSC304')">CMSC 304</a> <br />
+													<a class="required CMSC331" onclick="toggleClass('CMSC331')">CMSC 331</a><br />
+													<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
                                                 </span>
-												<ul>
-
-													<li>
-                                                        <span>
-    														<a class="CMSC304" onclick="toggleClass('CMSC304')">CMSC 304</a> <br />
-    														<a class="required CMSC331" onclick="toggleClass('CMSC331')">CMSC 331</a><br />
-    														<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
-                                                        </span>
-                                                    </li>
-
-                                                    
-                                                    <!-- these all have children -->
-
+                                            </li>
+                                            <li>
+                                                <a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a>
+                                                <ul>
                                                     <li>
-                                                        <a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a>
-                                                        <ul>
-                                                            <li>
-                                                                <a class="required CMSC411" onclick="toggleClass('CMSC411')">CMSC 411</a>
-                                                            </li>
-                                                        </ul>
+                                                        <a class="required CMSC411" onclick="toggleClass('CMSC411')">CMSC 411</a>
                                                     </li>
-
-													<li>
-						                                <span>
-															<a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a> <br/> 
-															<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a> 
-														</span>
-						                                <ul>
-                                							<li>                                                                           
-                                      							<a class="required CMSC421" onclick="toggleClass('CMSC421')">CMSC 421</a>
-                                      						</li>
-                                      					</ul>
-                                      				</li>
-
-                                      				<li>
-														<span>
-															<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a><br />
-															<span> Math <br />
-																<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a> <br />
-																<a class="STAT355" onclick="toggleClass('STAT355')">STAT 355</a>
-															</span>
-														</span>
-															<ul>
-																<li>
-																	<a class="required CMSC441" onclick="toggleClass('CMSC441')">CMSC 441</a>
-																</li>
-															</ul>
-													</li>
-
-													<li>
-								                        <a id="any400">Any 4xx<br /> & 341</a>
-								                        <ul>
-								                            <li>
-								                                <a class="required CMSC447" onclick="toggleClass('CMSC447')">CMSC 447</a>
-								                            </li>
-								                        </ul>
-								                    </li>
-
-												</ul>
-											</li>
-										</ul>
-
-								</li>
-
-								<!-- Core Math -->	
-								<li>
-									<a>Core Math Requirements</a>
-				                        <ul>
-				                        	<li>
-												<a class="required MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
+                                                </ul>
+                                            </li>
+											<li>
+				                                <span>
+													<a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a> <br/> 
+													<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a> 
+												</span>
 				                                <ul>
-				                                    <li>
-				                                        <a class="required MATH152" onclick="toggleClass('MATH152')">MATH 152</a>
-				                                         <ul>
-				                                    	<li>
-				                                            <a class="required STAT355" onclick="toggleClass('STAT355')">STAT 355</a> <br />                                        
-				                                    </li>
-				                                </ul>                         
-				                                    </li>
-				                                    <li>
-				                                    	<a class="required MATH221" onclick="toggleClass('MATH221')">MATH 221</a>
-				                                    </li>
-				                                </ul>
-				                            </li>
-				    					 </ul>
-								</li>
-								
-							</ul>
+                        							<li>                                                                           
+                              							<a class="required CMSC421" onclick="toggleClass('CMSC421')">CMSC 421</a>
+                              						</li>
+                              					</ul>
+                              				</li>
+                              				<li>
+												<span>
+													<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a><br />
+													<span> Math <br />
+														<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a> <br />
+														<a class="STAT355" onclick="toggleClass('STAT355')">STAT 355</a>
+													</span>
+												</span>
+													<ul>
+														<li>
+															<a class="required CMSC441" onclick="toggleClass('CMSC441')">CMSC 441</a>
+														</li>
+													</ul>
+											</li>
+											<li>
+						                        <a id="any400">Any 4xx<br /> & 341</a>
+						                        <ul>
+						                            <li>
+						                                <a class="required CMSC447" onclick="toggleClass('CMSC447')">CMSC 447</a>
+						                            </li>
+						                        </ul>
+						                    </li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<!-- Core Math -->	
+							<li>
+								<a>Core Math Requirements</a>
+		                        <ul>
+		                        	<li>
+										<a class="required MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
+		                                <ul>
+		                                    <li>
+		                                        <a class="required MATH152" onclick="toggleClass('MATH152')">MATH 152</a>
+		                                         <ul>
+		                                    	<li>
+		                                            <a class="required STAT355" onclick="toggleClass('STAT355')">STAT 355</a> <br />                                        
+		                                    </li>
+		                                </ul>                         
+		                                    </li>
+		                                    <li>
+		                                    	<a class="required MATH221" onclick="toggleClass('MATH221')">MATH 221</a>
+		                                    </li>
+		                                </ul>
+		                            </li>
+		    					 </ul>
+							</li>
+						</ul>
 					</li>
                 </ul>
             </div>
@@ -244,11 +232,11 @@ $classReqs = $db->fetchAllReqs();
 									<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a> <br />
 									<a class="MATH221" onclick="toggleClass('MATH221')">MATH 221</a> 
 								</span>
-									<ul>
-										<li>
-											<a class="CMSC435" onclick="toggleClass('CMSC435')">CMSC 435</a> 
-										</li>
-									</ul>
+								<ul>
+									<li>
+										<a class="CMSC435" onclick="toggleClass('CMSC435')">CMSC 435</a> 
+									</li>
+								</ul>
 							</li>
 							<li>
                                 <span>
@@ -267,16 +255,15 @@ $classReqs = $db->fetchAllReqs();
 									<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a> <br />
 									<a class="MATH221" onclick="toggleClass('MATH221')">MATH 221</a>
 								</span>
-									<ul>
-										<li>
-											<span class="CMSC341MATH152MATH221dep">
-												<a class="CMSC455" onclick="toggleClass('CMSC455')">CMSC 455</a> <br />
-												<a class="CMSC456" onclick="toggleClass('CMSC456')">CMSC 456</a>
-											</span>
-										</li>
-									</ul>
+								<ul>
+									<li>
+										<span class="CMSC341MATH152MATH221dep">
+											<a class="CMSC455" onclick="toggleClass('CMSC455')">CMSC 455</a> <br />
+											<a class="CMSC456" onclick="toggleClass('CMSC456')">CMSC 456</a>
+										</span>
+									</li>
+								</ul>
 							</li>
-
 							<li>
 								<span>
                         			<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
@@ -291,7 +278,6 @@ $classReqs = $db->fetchAllReqs();
 									</li>
 								</ul>
 							</li>
-
     					 </ul>
                     </li>
                 </ul>
