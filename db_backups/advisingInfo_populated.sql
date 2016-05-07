@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2016 at 06:09 PM
+-- Generation Time: May 07, 2016 at 05:32 PM
 -- Server version: 10.0.23-MariaDB
 -- PHP Version: 5.6.20
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `classes` (
   `CID` varchar(6) NOT NULL,
   `type` varchar(4) NOT NULL,
-  `name` varchar(7) NOT NULL
+  `name` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Course IDs';
 
 --
@@ -42,22 +42,22 @@ INSERT INTO `classes` (`CID`, `type`, `name`) VALUES
 ('051203', 'sci', 'GES110'),
 ('051363', 'sci', 'GES111'),
 ('052484', 'sci', 'BIOL251'),
-('052485', 'sci', 'BIOL251'),
+('052485', 'sci', 'BIOL251L'),
 ('052486', 'sci', 'BIOL252'),
-('052487', 'sci', 'BIOL252'),
+('052487', 'sci', 'BIOL252L'),
 ('052488', 'sci', 'BIOL275'),
-('052489', 'sci', 'BIOL275'),
+('052489', 'sci', 'BIOL275L'),
 ('052494', 'sci', 'BIOL302'),
-('052495', 'sci', 'BIOL302'),
+('052495', 'sci', 'BIOL302L'),
 ('052496', 'sci', 'BIOL303'),
-('052498', 'sci', 'BIOL303'),
+('052498', 'sci', 'BIOL303L'),
 ('052499', 'sci', 'BIOL304'),
-('052500', 'sci', 'BIOL304'),
+('052500', 'sci', 'BIOL304L'),
 ('052501', 'sci', 'BIOL305'),
-('052502', 'sci', 'BIOL305'),
+('052502', 'sci', 'BIOL305L'),
 ('052671', 'sci', 'CHEM101'),
 ('052673', 'sci', 'CHEM102'),
-('052675', 'sci', 'CHEM102'),
+('052675', 'sci', 'CHEM102L'),
 ('052879', 'cmsc', 'CMSC201'),
 ('052881', 'cmsc', 'CMSC202'),
 ('052883', 'cmsc', 'CMSC203'),
@@ -127,14 +127,14 @@ INSERT INTO `classes` (`CID`, `type`, `name`) VALUES
 ('055271', 'cmsc', 'MATH483'),
 ('056129', 'sci', 'PHYS121'),
 ('056131', 'sci', 'PHYS122'),
-('056132', 'sci', 'PHYS122'),
+('056132', 'sci', 'PHYS122L'),
 ('056138', 'sci', 'PHYS224'),
 ('056141', 'sci', 'PHYS304'),
 ('057054', 'math', 'STAT355'),
 ('100191', 'cmsc', 'CMSC457'),
 ('100315', 'sci', 'BIOL141'),
 ('100316', 'sci', 'BIOL142'),
-('100317', 'sci', 'BIOL300'),
+('100317', 'sci', 'BIOL300L'),
 ('101927', 'cmsc', 'CMSC447');
 
 -- --------------------------------------------------------
@@ -173,6 +173,12 @@ INSERT INTO `users` (`SID`, `fname`, `minitial`, `lname`, `email`, `phone`) VALU
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `classes`
+--
+ALTER TABLE `classes`
+  ADD UNIQUE KEY `CID` (`CID`);
 
 --
 -- Indexes for table `users`
