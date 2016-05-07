@@ -170,7 +170,7 @@ var classes = new Array(); // global array to manage classes entered
 	 	// For each class display the class in the proper div.
 	 	var divHTML = "";
 	 	for(var i = 0; i < classes.length; i++) {
-		 	string = "<span class='course'>" + classes[i] + "</span> ";
+		 	string = "<span class='course' onclick=\"toggleClass('" + classes[i] + "')\">" + classes[i] + "</span> ";
 		 	//console.log(classes[i]);
 		 	divHTML = divHTML + string;
 		}
