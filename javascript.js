@@ -350,3 +350,29 @@ var classes = new Array(); // global array to manage classes entered
 			studentForm.style.display = "inline";
 		}
 	}
+
+	function changeTab(type){
+		//get and hide all trees
+		var tabs = document.getElementsByClassName("tree");
+		for(var i = 0; i < tabs.length; i++){
+			tabs[i].style.display = "none";	
+		}
+
+		//display active tab 'type'
+		document.getElementById(type).style.display = "inline";
+
+		/*display groupings of trees:
+			cmsc 3 electives part 1 & part 2
+			math for cmsc & math for science
+			science & science labs
+		*/
+		if(type =="cmsc3"){
+			document.getElementById(type + "1").style.display = "inline";
+		}
+		else if(type =="math"){
+			document.getElementById(type + "1").style.display = "inline";
+		}
+		else if(type =="science"){
+			document.getElementById(type + "1").style.display = "inline";
+		}
+	}

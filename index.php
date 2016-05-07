@@ -98,7 +98,7 @@ $classReqs = $db->fetchAllReqs();
         Doesn't react well to wrapping: breaks the graph
         -->
         <div id="trees">
-            <div class="tree">
+            <div class="tree" id="cmsc1">
                 <ul>
 					<li>
 						<span class="required" id="CMSCGateway">CMSC Base Requirements</span>
@@ -210,7 +210,7 @@ $classReqs = $db->fetchAllReqs();
             </div>
 
             <!-- Tree for the two elective requirement -->	
-		 	<div class="tree">
+		 	<div class="tree" id="cmsc2">
                 <ul>
                     <li>
                         <a>Select Two Electives</a>
@@ -300,7 +300,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Tree for the any 3 elective requirements -->
-            <div class="tree">
+            <div class="tree" id="cmsc3">
                 <ul>
                     <li>
                         <a>Select Three Electives</a>
@@ -408,7 +408,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Tree for the any 3 elective requirements -->
-            <div class="tree">
+            <div class="tree" id="cmsc31">
                 <ul>
                     <li>
                         <a>Select Three Electives</a>
@@ -518,7 +518,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 			
 			<!-- Tree for the any 3 elective requirements that could fulifull by MATH classes -->
-		 	<div class="tree">
+		 	<div class="tree" id="math">
                 <ul>
                     <li>
                         <a>Two Math Electives To Fulfill Technical CMSC Electives</a>
@@ -601,7 +601,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Multi Req Tree for Math -->	
-		 	<div class="tree">
+		 	<div class="tree" id="math1">
                 <ul>
                     <li>
                         <a>Math To Satisfy Science Credits</a>
@@ -634,7 +634,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
-            <div class="tree">
+            <div class="tree" id="science">
                 <ul>
                     <li>
                         <a>Sciences</a>
@@ -763,7 +763,7 @@ $classReqs = $db->fetchAllReqs();
                     </li>
                 </ul>
             </div>
-            <div class="tree">
+            <div class="tree" id="science1">
                 <ul>
                     <li>
                         <a>Biology Labs</a>
@@ -828,6 +828,11 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>
         </div>
+        <div id="cmscButton" onclick="changeTab('cmsc1')"><p>cmsc requirements</p></div>
+        <div id="cmscButton" onclick="changeTab('cmsc2')"><p>cmsc 2 electives</p></div>
+        <div id="cmscButton" onclick="changeTab('cmsc3')"><p>cmsc 3 electives</p></div>
+        <div id="cmscButton" onclick="changeTab('math')"><p>math</p></div>
+        <div id="cmscButton" onclick="changeTab('science')"><p>science</p></div>
 
         <!-- Include the javascript -->
         <script>var classReqs = <?php echo json_encode($classReqs); ?>;</script>
