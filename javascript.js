@@ -342,6 +342,11 @@ var classes = new Array(); // global array to manage classes entered
 		classElement.setAttribute("value", classes.toString());
 	}
 
-	function showSubmit(){
-		document.getElementById("saveStudentForm").style.display = "inline";
+	function toggleSubmit() {
+		var studentForm = document.getElementById("saveStudentForm");
+		if (studentForm.style.display == "inline") {
+			studentForm.style.display = "none";
+		} else {
+			studentForm.style.display = "inline";
+		}
 	}

@@ -10,9 +10,10 @@
 
 body
 {
-    overflow-x: hidden;
+    overflow-x: visible;
     background-color: #F5CA5C;
     height:0;
+    width: 100%;
 }
 a
 {
@@ -23,7 +24,6 @@ div.header
 {
     font-size: 1.875em;
     text-align: center;
-    width:45em;
     text-shadow: 1px 2px white;
 }
 
@@ -36,7 +36,7 @@ form
     padding: 10px; /*Adds spacing inside the border.*/
     margin: 2px; /*Adds spacing outside the border.*/
     box-sizing: border-box; /*Makes it so the width value include the border and padding.*/
-    width: 400px; 
+    width: 600px; 
     background-color:white;
 }
 
@@ -48,6 +48,12 @@ input
     background-color: white;
 }
 
+#formArea {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+
 /*Styling the classes entered div */
 div.currentClasses
 {
@@ -56,7 +62,7 @@ div.currentClasses
     margin: 2px;
     box-sizing: border-box;
     border: 2px solid black;
-    width: 400px;
+    width: 600px;
     background-color: white;
 }
 
@@ -159,13 +165,22 @@ a.submitLink:hover
 #saveStudentForm
 {
     display: none;
+    position: relative;
+}
+
+#toggleFormButton {
+    width: 600px;
+    height: 30px;
+    margin: 2px;
 }
 
 /*Tree Css*/ 
 
 /*formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
 and http://thecodeplayer.com/walkthrough/css3-family-tree */
-
+#trees {
+    height: 0;
+}
 div.tree 
 {
 	position: relative;
@@ -176,7 +191,9 @@ div.tree
 /* this styles the list tags to be receptive to what we're going to do later */
 .tree ul 
 {
-    padding-top: 20px; position: relative;
+    padding-top: 6px;
+    margin: 0;
+    position: relative;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -188,7 +205,7 @@ div.tree
     text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 0px 0 2px;
+    padding: 6px 0px 0 2px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -201,7 +218,7 @@ div.tree
     content: '';
     position: absolute; top: 0; right: 50%;
     border-top: 1px solid #6A49A7;
-    width: 50%; height: 20px;
+    width: 50%; height: 6px;
 }
 
 .tree li::after
@@ -252,7 +269,7 @@ right connector from last child*/
     content: '';
     position: absolute; top: 0; left: 50%;
     border-left: 1px solid #6A49A7;
-    width: 0; height: 20px;        
+    width: 0; height: 6px;        
 }
 
 
@@ -260,12 +277,13 @@ right connector from last child*/
 .tree li a, .tree li span
 {
     border: 2px solid #6A49A7;
-    padding: 1px 1px;
-    margin: 1px;
+    padding: 2px;
+    margin: 2px;
     text-decoration: none;
     color: #666;
     font-family: arial, verdana, tahoma;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: bold;
     display: inline-block;
     background-color: white;
     border-radius: 7px;
