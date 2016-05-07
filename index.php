@@ -105,39 +105,37 @@ $classReqs = $db->fetchAllReqs();
 							<ul>
 								<li>
 									<span class="required" id="CMSCGateway">CMSC  <br /> 
-										<a class="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> 
+										<a class="CMSC201" onclick="toggleClass('CMSC201')">CMSC 201</a> <br />
 										<a class="MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
 								    </span>
 										<ul>
 											<li>
 												<span class="required" id="CMSCGateway">
-													<a class="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> 
+													<a class="CMSC202" onclick="toggleClass('CMSC202')">CMSC 202</a> <br />
 													<a class="CMSC203" onclick="toggleClass('CMSC203')">CMSC 203</a>
 													</span>
                                                 </span>
 												<ul>
 
 													<li>
-														<a class="CMSC304" onclick="toggleClass('CMSC304')">CMSC 304</a> <br />
-													</li>
+                                                        <span>
+    														<a class="CMSC304" onclick="toggleClass('CMSC304')">CMSC 304</a> <br />
+    														<a class="required CMSC331" onclick="toggleClass('CMSC331')">CMSC 331</a><br />
+    														<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
+                                                        </span>
+                                                    </li>
 
-													
-													<!-- these all have children -->
+                                                    
+                                                    <!-- these all have children -->
 
-													<li>
-														<a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a>
-														<ul>
-															<li>
-																<a class="required CMSC411" onclick="toggleClass('CMSC411')">CMSC 411</a>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<a class="required CMSC331" onclick="toggleClass('CMSC331')">CMSC 331</a>
-													</li>
-													<li>
-														<a class="required CMSC341" onclick="toggleClass('CMSC341')">CMSC 341</a>
-													</li>
+                                                    <li>
+                                                        <a class="required CMSC313" onclick="toggleClass('CMSC313')">CMSC 313</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a class="required CMSC411" onclick="toggleClass('CMSC411')">CMSC 411</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
 
 													<li>
 						                                <span>
@@ -183,7 +181,7 @@ $classReqs = $db->fetchAllReqs();
 
 								<!-- Core Math -->	
 								<li>
-									<a>Core Math</a>
+									<a>Core Math Requirements</a>
 				                        <ul>
 				                        	<li>
 												<a class="required MATH151" onclick="toggleClass('MATH151')">MATH 151</a>
@@ -604,7 +602,7 @@ $classReqs = $db->fetchAllReqs();
 		 	<div class="tree">
                 <ul>
                     <li>
-                        <a>Math To Satisfy Science Credits</a>
+                        <a>Math To Satisfy Science</a>
                         <ul>
                         	<li>
 								<a class="MATH152" onclick="toggleClass('MATH152')">MATH 152</a>

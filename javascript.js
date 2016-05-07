@@ -344,9 +344,12 @@ var classes = new Array(); // global array to manage classes entered
 
 	function toggleSubmit() {
 		var studentForm = document.getElementById("saveStudentForm");
+		var trees = document.getElementById("trees");
 		if (studentForm.style.display == "inline") {
 			studentForm.style.display = "none";
+			trees.style.display = "inline";
 		} else {
 			studentForm.style.display = "inline";
+			trees.style.display = "none";
 		}
 	}
