@@ -156,6 +156,10 @@ a.submitLink:hover
     display: none;
 }
 
+#saveStudentForm
+{
+    display: none;
+}
 
 /*Tree Css*/ 
 

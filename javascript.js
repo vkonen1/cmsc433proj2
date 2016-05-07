@@ -341,3 +341,7 @@ var classes = new Array(); // global array to manage classes entered
 		var classElement = document.getElementsByName("classes")[0];
 		classElement.setAttribute("value", classes.toString());
 	}
+
+	function showSubmit(){
+		document.getElementById("saveStudentForm").style.display = "inline";
+	}
