@@ -57,7 +57,7 @@ input
 /*Styling the classes entered div */
 div.currentClasses
 {
-    min-height: 145px;
+    min-height: 85px;
     padding: 5px;
     margin: 2px;
     box-sizing: border-box;
@@ -77,6 +77,7 @@ span.course
     display: inline-block;	
     border-radius: 7px;
     background-color: white;
+    cursor: pointer;
 }
 
 span.NA {
@@ -192,6 +193,7 @@ div.tree
 .tree ul 
 {
     padding-top: 6px;
+    padding-left: 0;
     margin: 0;
     position: relative;
     transition: all 0.5s;
@@ -210,6 +212,10 @@ div.tree
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
 
+}
+
+ul > li > a {
+    margin-left: 7px !important;
 }
 
 /*We will use ::before and ::after to draw the connectors*/
