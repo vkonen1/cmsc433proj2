@@ -85,6 +85,17 @@ $classReqs = $db->fetchAllReqs();
 	            </form>
             </div>
         </div>
+
+        <!-- Selection Tab -->
+        <div style="width: 1000px; margin: 0 auto;" >
+        	<div id="cmscButton" onclick="changeTab('cmsc1')">CMSC Requirements</div>
+	        <div id="cmscButton" onclick="changeTab('cmsc2')">CMSC 2 Electives</div>
+	        <div id="cmscButton" onclick="changeTab('cmsc3')">CMSC 3 Electives</div>
+	        <div id="cmscButton" onclick="changeTab('math')">Math</div>
+	        <div id="cmscButton" onclick="changeTab('science')">Science</div>
+        </div>
+        	
+
         <div class="clear"></div>
 
         <!--
@@ -812,11 +823,6 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>
         </div>
-        <div id="cmscButton" onclick="changeTab('cmsc1')"><p>cmsc requirements</p></div>
-        <div id="cmscButton" onclick="changeTab('cmsc2')"><p>cmsc 2 electives</p></div>
-        <div id="cmscButton" onclick="changeTab('cmsc3')"><p>cmsc 3 electives</p></div>
-        <div id="cmscButton" onclick="changeTab('math')"><p>math</p></div>
-        <div id="cmscButton" onclick="changeTab('science')"><p>science</p></div>
 
         <!-- Include the javascript -->
         <script>var classReqs = <?php echo json_encode($classReqs); ?>;</script>
