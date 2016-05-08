@@ -48,8 +48,6 @@ $classReqs = $db->fetchAllReqs();
 	            </form>
             </div>
 
-
-
             <!-- Contains the legend for the tree, and a dynamically generated list
             of which classes the user has entered. -->
             <div class="currentClasses">
@@ -100,7 +98,6 @@ $classReqs = $db->fetchAllReqs();
 	        <div id="cmscButton" onclick="changeTab('science')">Science</div>
         </div>
         	
-
         <div class="clear"></div>
 
         <!--
@@ -165,11 +162,11 @@ $classReqs = $db->fetchAllReqs();
 														<a class="STAT355" onclick="toggleClass('STAT355')">STAT 355</a>
 													</span>
 												</span>
-													<ul>
-														<li>
-															<a class="required CMSC441" onclick="toggleClass('CMSC441')">CMSC 441</a>
-														</li>
-													</ul>
+												<ul>
+													<li>
+														<a class="required CMSC441" onclick="toggleClass('CMSC441')">CMSC 441</a>
+													</li>
+												</ul>
 											</li>
 											<li>
 						                        <a id="any400">Any 4xx<br /> & 341</a>
@@ -193,11 +190,11 @@ $classReqs = $db->fetchAllReqs();
 		                                <ul>
 		                                    <li>
 		                                        <a class="required MATH152" onclick="toggleClass('MATH152')">MATH 152</a>
-		                                         <ul>
-		                                    	<li>
-		                                            <a class="required STAT355" onclick="toggleClass('STAT355')">STAT 355</a> <br />                                        
-		                                    </li>
-		                                </ul>                         
+		                                        <ul>
+			                                    	<li>
+			                                            <a class="required STAT355" onclick="toggleClass('STAT355')">STAT 355</a> <br />                   
+			                                    	</li>
+		                               			</ul>                         
 		                                    </li>
 		                                    <li>
 		                                    	<a class="required MATH221" onclick="toggleClass('MATH221')">MATH 221</a>

@@ -277,6 +277,11 @@ var classes = new Array(); // global array to manage classes entered
 		
 
 		/*
+		-------------------------------------------
+		Commented this hard coded multi Classes 
+		Replaced with span so we don't have
+		to code all the mutli classes one by one
+		-------------------------------------------
 		// Special ids for joint class nodes
 		// id="313_341"
 		if(classes.indexOf('CMSC313') != -1 && classes.indexOf('CMSC341') != -1) {
