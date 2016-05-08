@@ -175,14 +175,19 @@ a.submitLink:hover
     margin: 2px;
 }
 
+#tabButton{
+	width: 1000px; 
+	margin: 0 auto;
+}
 #cmscButton{
     background-color: #c08d0c;
     padding: 9px 0;
-    width: 200px;
+    width: 196px;
     text-align: center;
     border-radius: 30px;
     float:left;
     cursor: pointer;
+    border: 2px solid #181202;
 }
 #cmscButton:hover{
     background-color: #f0b00f;

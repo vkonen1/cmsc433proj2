@@ -90,7 +90,7 @@ $classReqs = $db->fetchAllReqs();
         </div>
 
         <!-- Selection Tab -->
-        <div style="width: 1000px; margin: 0 auto;" >
+        <div id="tabButton">
         	<div id="cmscButton" onclick="changeTab('cmsc1')">CMSC Requirements</div>
 	        <div id="cmscButton" onclick="changeTab('cmsc2')">CMSC 2 Electives</div>
 	        <div id="cmscButton" onclick="changeTab('cmsc3')">CMSC 3 Electives</div>
