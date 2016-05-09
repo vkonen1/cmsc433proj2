@@ -76,20 +76,20 @@ $classReqs = $db->fetchAllReqs();
             <div id="studentForm">
 	            <!--User info section-->
 	            <form method="post" class="userInfo" action="submit.php" onsubmit="validate();">
-	                Name:<br/>
+	                <b>Name</b><br/>
 	                <!--Name is split up into seperate fields because that is how it is set up in the database-->
 	                <input type="text" name="fname" required="required" placeholder="First Name" size="16" />
 	                <input type="text" name="minitial" required="required" placeholder="MI" size="1" />
 	                <input type="text" name="lname" required="required" placeholder="Last Name" size="16" /><br/>
 	                
-	                Campus ID:<br/>
+	                <b>Student ID</b><br/>
 	                <input type="text" name="SID" required="required" pattern="[A-Za-z]{2}[0-9]{5}" title="Enter in the form XX#####" /><br/>
 	                
-	                Email (Best to contact):<br/>
+	                <b>Email</b><br/>
 	                <!--Reminder: Using the email type does most of the error checking for us-->
 	                <!--The email type checks to make sure the input is of the pattern something@something-->
 	                <input type="email" name="email" required="required" title="Please enter a valid email address" /><br/>
-	                Phone Number (Best to contact):<br/>
+	                <b>Phone</b><br/>
 	                <input type="text" name="phone1" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###" /> -
 	                <input type="text" name="phone2" required="required" size="3" maxlength="3" pattern="[0-9]{3}" onkeyup="boxJump(this)" title="Please enter in the form: ###" /> -
 	                <input type="text" name="phone3" required="required" size="4" maxlength="4" pattern="[0-9]{4}" title="Please enter in the form: ####" /><br/>
