@@ -7,6 +7,14 @@
  * 				and initalizes the functions to be used to query the database.
  *******************************************************************************************************************/
 
+/*  
+ *	------------------------------------------------------------------------------------------------
+ *	Modified by: Team 11 (Daniel, Victor, Ka)
+ *	Modified on: 5/9/2016
+ *	Description: Modified this file for Project 2
+ *  Slightly modified to work with reverse engineered database
+ *	------------------------------------------------------------------------------------------------
+ */
 class Database
 {
 	// Two different databases are used to store the information
@@ -38,8 +46,8 @@ class Database
 		$this->reqDb = $reqDb;
 	}
 	
-	// Fetches an array of the CIDs of all classes stored in the database.
-	// Does not fetch any other information
+	// modified this to select all classes and all fields for each one and return
+	// an array with that information
 	function fetchClasses()
 	{
 		$classes = array();	
@@ -51,6 +59,8 @@ class Database
 		return $classes;
 	}
 
+	// added this function to select all class names only, which is what the
+	// javascript uses to manipulate the tree and class list
 	function fetchClassNames()
 	{
 		$classes = array();	
@@ -62,8 +72,7 @@ class Database
 		return $classes;
 	}
 
-	// Given a CID, this fetches the requirements as an array of preqreq classes
-	// each class containing an array of requirements for that class
+	// modified this to select from requirements by actual course id not name
 	function fetchReqs($classId)
 	{
 		$prereqs = array();
@@ -108,6 +117,7 @@ class Database
 		return $allReqs;
 	}
 
+	// added this to get a class name given the actual course id
 	function fetchClassName($classId)
 	{
 		$result = $this->infoDb->query("SELECT name FROM classes WHERE CID = '$classId'");
@@ -115,6 +125,7 @@ class Database
 		return $class['name'];
 	}
 
+	// added this to get the actual course id given a class name
 	function fetchClassId($className)
 	{
 		$result = $this->infoDb->query("SELECT CID FROM classes WHERE name = '$className'");

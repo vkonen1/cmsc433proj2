@@ -11,6 +11,7 @@ ob_start();
 echo "<link rel='stylesheet' type='text/css' href='style.css'/>";
 echo "<link rel=\"icon\" href=\"icon.ico\" />";
 
+//removed the session variable for classes 
 // Connect to the database
 require_once("mysqlSetup.php");
 $db = new Database(); // Has members $infoDb and $reqDb
@@ -46,6 +47,7 @@ $allClasses = $db->fetchClassNames();
 foreach($classes as $class) {
 	
 	// If a class ID is misset, add it to the invalid array
+	// updated this to work with the science classes being added
 	if(!preg_match('/^[A-Z]{3,4}[1-4][0-9]{2}(H|Y|L)?/', $class)) {
 		array_push($invalid, $class);
 		
