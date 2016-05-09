@@ -61,7 +61,7 @@ $classReqs = $db->fetchAllReqs();
                 </div>
             </div>
           
-            <button id="toggleFormButton" onclick="toggleSubmit();">Student Info</button>
+            <button id="toggleFormButton" onclick="toggleSubmit();">Toggle Student Info</button>
 
             <div id="saveStudentForm">
 	            <!--User info section-->
@@ -209,7 +209,7 @@ $classReqs = $db->fetchAllReqs();
             </div>
 
             <!-- Tree for the two elective requirement -->	
-		 	<div class="tree" id="cmsc2">
+		 	<div class="tree" id="cmsc2" style="display: none;">
                 <ul>
                     <li>
                         <a>Select Two Electives</a>
@@ -297,7 +297,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Tree for the any 3 elective requirements -->
-            <div class="tree" id="cmsc3">
+            <div class="tree" id="cmsc3" style="display: none;">
                 <ul>
                     <li>
                         <a>Select Three Electives</a>
@@ -403,7 +403,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Tree for the any 3 elective requirements -->
-            <div class="tree" id="cmsc31">
+            <div class="tree" id="cmsc31" style="display: none;">
                 <ul>
                     <li>
                         <a>Select Three Electives</a>
@@ -513,7 +513,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 			
 			<!-- Tree for the any 3 elective requirements that could fulifull by MATH classes -->
-		 	<div class="tree" id="math">
+		 	<div class="tree" id="math" style="display: none;">
                 <ul>
                     <li>
                         <a>Two Math Electives To Fulfill Technical CMSC Electives</a>
@@ -589,7 +589,7 @@ $classReqs = $db->fetchAllReqs();
             </div>	
 
             <!-- Multi Req Tree for Math -->	
-		 	<div class="tree" id="math1">
+		 	<div class="tree" id="math1" style="display: none;">
                 <ul>
                     <li>
                         <a>Math To Satisfy Science</a>
@@ -621,7 +621,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
-            <div class="tree" id="science">
+            <div class="tree" id="science" style="display: none;">
                 <ul>
                     <li>
                         <a>Sciences</a>
@@ -750,7 +750,7 @@ $classReqs = $db->fetchAllReqs();
                     </li>
                 </ul>
             </div>
-            <div class="tree" id="science1">
+            <div class="tree" id="science1" style="display: none;">
                 <ul>
                     <li>
                         <a>Biology Labs</a>

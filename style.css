@@ -25,6 +25,7 @@ div.header
     font-size: 1.875em;
     text-align: center;
     text-shadow: 1px 2px white;
+    margin: 0 0 5px 0;
 }
 
 .clear {
@@ -33,10 +34,12 @@ div.header
 
 form
 {
+    position: relative;
+    left: 300px;
     padding: 10px; /*Adds spacing inside the border.*/
     margin: 2px; /*Adds spacing outside the border.*/
     box-sizing: border-box; /*Makes it so the width value include the border and padding.*/
-    width: 600px; 
+    width: 400px; 
     background-color:white;
 }
 
@@ -50,7 +53,7 @@ input
 
 #formArea {
     position: relative;
-    width: 600px;
+    width: 1000px;
     margin: auto;
 }
 
@@ -59,10 +62,10 @@ div.currentClasses
 {
     min-height: 85px;
     padding: 5px;
-    margin: 2px;
+    margin: 0;
     box-sizing: border-box;
     border: 2px solid black;
-    width: 600px;
+    width: 1000px;
     background-color: white;
 }
 
@@ -170,9 +173,13 @@ a.submitLink:hover
 }
 
 #toggleFormButton {
-    width: 600px;
-    height: 30px;
-    margin: 2px;
+    position: relative;
+    left: 300px;
+    width: 400px;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 #tabButton{
@@ -198,11 +205,13 @@ a.submitLink:hover
 /*formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
 and http://thecodeplayer.com/walkthrough/css3-family-tree */
 #trees {
+    margin: auto;
+    position: relative;
     height: 0;
+    width: 1000px;
 }
 div.tree 
 {
-	position: relative;
 	z-index: -1;
     height: 0;
 }
@@ -219,7 +228,7 @@ div.tree
     -moz-transition: all 0.5s;
 }
 
-.tree li 
+.tree li
 {
     float: left; 
     text-align: center;
