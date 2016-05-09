@@ -318,7 +318,7 @@ var classes = new Array(); // global array to manage classes entered
 				var element = document.getElementById("any400");
 				element.style.border = "2px solid #33cc33";
 				element.style.backgroundColor = "#adebad";
-				//Added
+				//Change 447 bubble to yellow when an 4xx with 341 selected
 				var childEle = document.getElementsByClassName("CMSC447");
 				for (var j = 0; j < childEle.length; j++) {
 					childEle[j].style.border = "2px solid #ffff00";
@@ -327,6 +327,7 @@ var classes = new Array(); // global array to manage classes entered
 				break;
 			}
 		}
+		// Change 447 bubble to green when selected
 		if(classes.indexOf('CMSC447') != -1) {
 			var childEle = document.getElementsByClassName("CMSC447");
 			for (var j = 0; j < childEle.length; j++) {
