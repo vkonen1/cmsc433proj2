@@ -6,6 +6,18 @@
  * Description: This is the main page for Project 1. This file contains strictly HTML and JavaScript.
  *              All CSS should be written in style.css and all PHP should be written in the submission
  *              handling page (which currently does not exist).
+ *
+ *  ------------------------------------------------------------------------------------------------
+ *	Modified by: Team 11 (Daniel, Victor, Ka)
+ *	Modified on: 5/9/2016
+ *	Description: Modified this file for Project 2	
+ *				 The project was to add Math, Science and Stat classes/functions.
+ *				 Then cleaning up their code and have documentation.
+ *				 Changes:
+ *				 Added - Math, Sci, Stat Classes to the tree
+ *				 Reorignize the tree - to match the CMSC major worksheet for better understanding
+ *	------------------------------------------------------------------------------------------------
+ *
  * ***************************************************************************************************************** */
 require_once("mysqlSetup.php");
 $db = new Database();
@@ -17,28 +29,28 @@ $classReqs = $db->fetchAllReqs();
     <head>
         <link rel="icon" href="icon.ico" />
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <title>Project 1</title>	
+        <title>Project 2</title>	
     </head>
     <body>
         <div class="header">CMSC Course Advising Form</div>
         <div id="formArea">
             <!--Two forms for submission handling-->
             <!--All field names match their corresponding title in the database-->
+            <!--
+            	This form was change because the old group had user to type in
+				the class manually and adding/removing/clear it.
+
+				We switch to onclick so users can click on the class they want
+				adding and removing as they click.
+
+				We kept this and hidden this form because we used the fields in javascript 
+				for our onclicks.
+            -->
             <div id="oldClassInput">
+            <!--THIS FORM IS HIDDEN-->
             <!--Course Info section-->
 	            <form class="courseinfo" method="post" onsubmit="return updateClasses(this.submitted);">
-	            	<!--Replaced this select with a input for our onclick function to work properly-->
-	            	<!--Most of the classes chosen will be in one of these departments-->
-	                <!--CMSC is chosen as default because the majority of the classes will be CMSC-->
-	            	<!--
-	                Enter Class:
-	                <select name="department" value="">
-	                    <option value="cmsc" selected="selected">CMSC</option>
-	                    <option value="math">MATH</option>
-	                    <option value="stat">SCI</option>
-	                </select>
-	                -->
-
+	           		<!--Deleted their select tag and replaced with input for name=department-->
 	                <input type="text" name="department" title="Enter class type" />
 	                <input type="text" name="coursenumber" maxlength="3" size="3" title="Enter class number in the form: ###" />
 	                <br/>
@@ -56,16 +68,14 @@ $classReqs = $db->fetchAllReqs();
                 <span class="curr">Can Take</span>
                 <span class="done">Taken</span><br/>
                 Classes Entered - Numerical Order:
-                <div  id="classDiv">
-
-                </div>
+                <div id="classDiv"></div>
             </div>
           
             <button id="toggleFormButton" onclick="toggleSubmit();">Toggle Student Info</button>
 
-            <div id="saveStudentForm">
+            <div id="studentForm">
 	            <!--User info section-->
-	            <form method="post" class="userinfo" action="submit.php" onsubmit="validate();">
+	            <form method="post" class="userInfo" action="submit.php" onsubmit="validate();">
 	                Name:<br/>
 	                <!--Name is split up into seperate fields because that is how it is set up in the database-->
 	                <input type="text" name="fname" required="required" placeholder="First Name" size="16" />
@@ -111,6 +121,7 @@ $classReqs = $db->fetchAllReqs();
         Doesn't react well to wrapping: breaks the graph
         -->
         <div id="trees">
+        	<!--Required CMSC and MATH Courses Tree-->
             <div class="tree" id="cmsc1">
                 <ul>
 					<li>
@@ -296,7 +307,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
-            <!-- Tree for the any 3 elective requirements -->
+            <!-- Tree #1/2 for the any 3 elective requirements -->
             <div class="tree" id="cmsc3" style="display: none;">
                 <ul>
                     <li>
@@ -402,7 +413,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
-            <!-- Tree for the any 3 elective requirements -->
+            <!-- Tree #2/2 for the any 3 elective requirements -->
             <div class="tree" id="cmsc31" style="display: none;">
                 <ul>
                     <li>
@@ -588,7 +599,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
-            <!-- Multi Req Tree for Math -->	
+            <!-- Tree for Math classes that count to Sci Credits -->	
 		 	<div class="tree" id="math1" style="display: none;">
                 <ul>
                     <li>
@@ -621,6 +632,7 @@ $classReqs = $db->fetchAllReqs();
                 </ul>
             </div>	
 
+            <!--Science Tree-->
             <div class="tree" id="science" style="display: none;">
                 <ul>
                     <li>
@@ -750,6 +762,7 @@ $classReqs = $db->fetchAllReqs();
                     </li>
                 </ul>
             </div>
+            <!--Biology Lab Tree-->
             <div class="tree" id="science1" style="display: none;">
                 <ul>
                     <li>
