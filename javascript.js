@@ -314,11 +314,24 @@ var classes = new Array(); // global array to manage classes entered
 		
 		// id="any400"
 		for(var i = 0; i < classes.length; i++) {
-			if(classes[i].match(/4[0-9][0-9]/) != null && classes.indexOf('CMSC341') != -1) {
+			if(classes[i].match(/CMSC4[0-9][0-9]/) != null && classes.indexOf('CMSC341') != -1) {
 				var element = document.getElementById("any400");
 				element.style.border = "2px solid #33cc33";
 				element.style.backgroundColor = "#adebad";
+				//Added
+				var childEle = document.getElementsByClassName("CMSC447");
+				for (var j = 0; j < childEle.length; j++) {
+					childEle[j].style.border = "2px solid #ffff00";
+					childEle[j].style.backgroundColor = "#ffff44";
+				}
 				break;
+			}
+		}
+		if(classes.indexOf('CMSC447') != -1) {
+			var childEle = document.getElementsByClassName("CMSC447");
+			for (var j = 0; j < childEle.length; j++) {
+				childEle[j].style.border = "2px solid #33cc33";
+				childEle[j].style.backgroundColor = "#adebad";
 			}
 		}
 	}
