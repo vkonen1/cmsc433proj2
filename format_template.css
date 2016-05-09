@@ -1,0 +1,47 @@
+#css_format_template {
+	/* display */
+	content
+	cursor
+	box-sizing
+	display
+	overflow
+	transform
+
+	/* sizing */
+	height
+	width
+
+	/* positioning */
+	clear
+	position
+	float
+	left
+	top
+	transition
+	vertical-align
+	z-index
+
+	/* background */
+	background
+	background-color
+
+	/* padding, border, margin */
+	padding
+	border
+	border-color
+	border-radius
+	margin
+
+	/* list formatting */
+	list-style-type
+
+	/* text formatting */
+	color
+	text-align
+	line-height
+	font-family
+	font-size
+	font-weight
+	text-decoration
+	text-shadow
+}
