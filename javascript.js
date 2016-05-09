@@ -1,19 +1,26 @@
-<!-- Javascript functions -->
-//console.log(classReqs);
-var classes = new Array(); // global array to manage classes entered
-// var classReqs = <?php echo $JSONreqs; ?>; // Declared in index.php
-// NOTE: The classReqs array is a four dimensional array and very confusing at first
-// 		 however, the entire array is document in the README. Please read that before
-//		 tampering with classReqs.
+	/* Javascript functions */
+	var classes = new Array(); // global array to manage classes entered
+	// var classReqs = <?php echo $JSONreqs; ?>; // Declared in index.php
+	// NOTE: The classReqs array is a four dimensional array and very confusing at first
+	// 		 however, the entire array is document in the README. Please read that before
+	//		 tampering with classReqs.
+
+	/*  
+	 *	------------------------------------------------------------------------------------------------
+	 *	Modified by: Team 11 (Daniel, Victor, Ka)
+	 *	Modified on: 5/9/2016
+	 *	Description: Modified this file for Project 2	
+	 *	------------------------------------------------------------------------------------------------
+	 */
 	
 	window.onload = function() {
 		updateViews();
 	}
-	<!--
+	/*
 	  // boxJump()
 	  // Preconditions: element is the element to jump from
 	  // Postcondtions: Moves cursor to next text box when entering phone number
-	-->
+	*/
 	function boxJump(element) {
 		if(element.value.length >= 3) {
 			var i;
@@ -33,17 +40,13 @@ var classes = new Array(); // global array to manage classes entered
 	function toggleClass(className) {
 		var type;
 		var num;
-		//console.log(className);
+
 		if (className.indexOf("CMSC") == 0 || className.indexOf("MATH") == 0) {
 			type = className.substring(0, 4);
 			num = className.substring(4);
-			//console.log(type);
-			//console.log(num);
 		} else {
 			type = className.substring(0, 3);
 			num = className.substring(3);
-			//console.log(type);
-			//console.log(num);
 		}
 
 		var toggle_ar = true;
@@ -57,8 +60,6 @@ var classes = new Array(); // global array to manage classes entered
 		document.getElementsByName("department")[0].value = type;
 		document.getElementsByName("coursenumber")[0].value = num;
 
-
-
 		if (toggle_ar) {
 			updateClasses("addClass");
 		} else {
@@ -66,14 +67,13 @@ var classes = new Array(); // global array to manage classes entered
 		}
 	}
 	
-	<!--
+	/*
 	  // updateClasses()
 	  // Preconditions: submitClicked is the submit value of the form
 	  // Postcondtions: Updates class information string (stored in courses.value) 
 	  // based on submitted data
-	-->
+	*/
 	function updateClasses(submitClicked) {
-		
 		// Check for clear first since the class number text box can
 		// be empty for this option.
 		if(submitClicked == "courseClear") {
@@ -89,8 +89,6 @@ var classes = new Array(); // global array to manage classes entered
 			var dept = document.getElementsByName("department")[0].value;
 			var number = document.getElementsByName("coursenumber")[0].value;
 			var classString = (dept.concat(number)).toUpperCase();
-			
-			//console.log(classString);
 
 			// Verify the proper form was used
 			if(!/[1-4][0-9]{2}/.test(number)) {
@@ -117,7 +115,6 @@ var classes = new Array(); // global array to manage classes entered
 			}
 			
 		}
-		//console.log(classes);
 		// Clearing textbox
 		document.getElementsByName("coursenumber")[0].value = "";
 
@@ -126,11 +123,11 @@ var classes = new Array(); // global array to manage classes entered
 		return false;
 	}
 	
-	<!--
+	/*
 	  // clearStyling()
 	  // Preconditions: none
 	  // Postcondtions: Clears the tree of all styling
-	-->
+	*/
 	function clearStyling() {
 		
 		// For every single class
@@ -151,12 +148,12 @@ var classes = new Array(); // global array to manage classes entered
 		}
 	}
 
-	<!--
+	/*
 	  // updateViews()
 	  // Preconditions: none
 	  // Postcondtions: Updates the courses taken list and the courses
 	  // 				that can be taken tree.
-	-->
+	*/
 	
 	function updateViews() {
 		
@@ -171,7 +168,6 @@ var classes = new Array(); // global array to manage classes entered
 	 	var divHTML = "";
 	 	for(var i = 0; i < classes.length; i++) {
 		 	string = "<span class='course' onclick=\"toggleClass('" + classes[i] + "')\">" + classes[i] + "</span> ";
-		 	//console.log(classes[i]);
 		 	divHTML = divHTML + string;
 		}
 		div.innerHTML = divHTML;
@@ -275,44 +271,16 @@ var classes = new Array(); // global array to manage classes entered
 			}
 		}
 		
-
 		/*
-		-------------------------------------------
-		Commented this hard coded multi Classes 
-		Replaced with span so we don't have
-		to code all the mutli classes one by one
-		-------------------------------------------
-		// Special ids for joint class nodes
-		// id="313_341"
-		if(classes.indexOf('CMSC313') != -1 && classes.indexOf('CMSC341') != -1) {
-			//var element = document.getElementById("313_341");
-			element.style.border = "2px solid #33cc33";
-			element.style.backgroundColor = "#adebad";
-		}
-		
-		// id="435_471"
-		if(classes.indexOf('CMSC435') != -1 && classes.indexOf('CMSC471') != -1) {
-			//var element = document.getElementById("435_471");
-			element.style.border = "2px solid #33cc33";
-			element.style.backgroundColor = "#adebad";
-		}
-		
-		// id="421_481"
-		if(classes.indexOf('CMSC421') != -1 && classes.indexOf('CMSC481') != -1) {
-			//var element = document.getElementById("421_481");
-			element.style.border = "2px solid #33cc33";
-			element.style.backgroundColor = "#adebad";
-		}
-		
-		// id="461_481"
-		if(classes.indexOf('CMSC461') != -1 && classes.indexOf('CMSC481') != -1) {
-			//var element = document.getElementById("461_481");
-			element.style.border = "2px solid #33cc33";
-			element.style.backgroundColor = "#adebad";
-		}
+			-------------------------------------------
+			Took out this hard coded multi Classes
+			Javascript that was here.
+			We replaced with span so we don't have
+			to code all the mutli classes one by one
+			-------------------------------------------
 		*/
-		
-		// id="any400"
+
+		// id="any400" to change the Any 4xx & 341 bubble color
 		for(var i = 0; i < classes.length; i++) {
 			if(classes[i].match(/CMSC4[0-9][0-9]/) != null && classes.indexOf('CMSC341') != -1) {
 				var element = document.getElementById("any400");
@@ -327,7 +295,7 @@ var classes = new Array(); // global array to manage classes entered
 				break;
 			}
 		}
-		// Change 447 bubble to green when selected
+		// Added this to Change 447 bubble to green when selected
 		if(classes.indexOf('CMSC447') != -1) {
 			var childEle = document.getElementsByClassName("CMSC447");
 			for (var j = 0; j < childEle.length; j++) {
@@ -337,25 +305,25 @@ var classes = new Array(); // global array to manage classes entered
 		}
 	}
 	
-	<!--
+	/*
 	  // validate()
 	  // Preconditions: none
 	  // Postcondtions: Validates information upon submitting,
 	  //                since almost all validation is done through html,
 	  //				this will be nearly empty.
-	-->
+	*/
 	
 	function validate() {
 		submitClasses();
 	 	return true;
 	}
 
-	<!--
+	/*
 	  // submitClasses()
 	  // Preconditions: none
 	  // Postcondtions: Populates the hidden element with a string containing all
 	  // 				classes for posting.
-	-->
+	*/
 	
 	function submitClasses() {
 		var classElement = document.getElementsByName("classes")[0];
@@ -377,6 +345,7 @@ var classes = new Array(); // global array to manage classes entered
 		}
 	}
 
+	// Use for selecting a tab and displaying the correct tree
 	function changeTab(type){
 		//get and hide all trees
 		var tabs = document.getElementsByClassName("tree");
