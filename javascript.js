@@ -364,12 +364,15 @@ var classes = new Array(); // global array to manage classes entered
 	function toggleSubmit() {
 		var studentForm = document.getElementById("saveStudentForm");
 		var trees = document.getElementById("trees");
+		var tabs = document.getElementById("tabButton");
 		if (studentForm.style.display == "inline") {
 			studentForm.style.display = "none";
-			trees.style.display = "inline";
+			trees.style.display = "block";
+			tabs.style.display = "block";
 		} else {
 			studentForm.style.display = "inline";
 			trees.style.display = "none";
+			tabs.style.display = "none";
 		}
 	}
 
