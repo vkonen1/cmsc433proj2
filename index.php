@@ -100,12 +100,12 @@ $classReqs = $db->fetchAllReqs();
         </div>
 
         <!-- Selection Tab -->
-        <div id="tabButton">
-        	<div id="cmscButton" onclick="changeTab('cmsc1')">CMSC Requirements</div>
-	        <div id="cmscButton" onclick="changeTab('cmsc2')">CMSC 2 Electives</div>
-	        <div id="cmscButton" onclick="changeTab('cmsc3')">CMSC 3 Electives</div>
-	        <div id="cmscButton" onclick="changeTab('math')">Math</div>
-	        <div id="cmscButton" onclick="changeTab('science')">Science</div>
+        <div id="tabButtons">
+        	<div class="cmscButton" onclick="changeTab('cmsc1')">CMSC Requirements</div>
+	        <div class="cmscButton" onclick="changeTab('cmsc2')">CMSC 2 Electives</div>
+	        <div class="cmscButton" onclick="changeTab('cmsc3')">CMSC 3 Electives</div>
+	        <div class="cmscButton" onclick="changeTab('math')">Math</div>
+	        <div class="cmscButton" onclick="changeTab('science')">Science</div>
         </div>
         	
         <div class="clear"></div>

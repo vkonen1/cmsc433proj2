@@ -363,9 +363,9 @@ var classes = new Array(); // global array to manage classes entered
 	}
 
 	function toggleSubmit() {
-		var studentForm = document.getElementById("saveStudentForm");
+		var studentForm = document.getElementById("studentForm");
 		var trees = document.getElementById("trees");
-		var tabs = document.getElementById("tabButton");
+		var tabs = document.getElementById("tabButtons");
 		if (studentForm.style.display == "inline") {
 			studentForm.style.display = "none";
 			trees.style.display = "block";
