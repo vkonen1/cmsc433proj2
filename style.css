@@ -1,341 +1,348 @@
-/*******************************************************************************************************************
-*        File: style.css
-*     Created: 2/22/2016
+/*
+FORMAT:
+Styles for all selectors follow the format depicted in theformat_template.css
+file; Selector order follows the html layout
+*/
 
-*     Project: CMSC 433 - Project 1
-* Description: This is the main (and hopefully only) stylesheet for Project 1. This file contains strictly CSS.
-*******************************************************************************************************************/
+/* page background */
+body {
+    overflow: visible;
 
-/*General Styling*/
-
-body
-{
-    overflow-x: visible;
-    background-color: #F5CA5C;
-    height:0;
+    height: 0;
     width: 100%;
+    
+    background-color: #F5CA5C;
 }
-a
-{
-    cursor: pointer;
-}
+/* end page background */
 
-div.header
-{
-    font-size: 1.875em;
-    text-align: center;
-    text-shadow: 1px 2px white;
+/* page header */
+.header {
     margin: 0 0 5px 0;
+
+    text-align: center;
+    font-size: 1.875em;
+    text-shadow: 1px 2px #FFFFFF;
 }
 
+/* used to clear float elements */
 .clear {
     clear: both;
 }
 
-form
-{
-    position: relative;
-    left: 300px;
-    padding: 10px; /*Adds spacing inside the border.*/
-    margin: 2px; /*Adds spacing outside the border.*/
-    box-sizing: border-box; /*Makes it so the width value include the border and padding.*/
-    width: 400px; 
-    background-color:white;
-}
-
- /*To space the inputs out a little bit from each other, without adding more spacing to the sides.*/
-input
-{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: white;
-}
-
+/* container for class list and student info form */
 #formArea {
-    position: relative;
     width: 1000px;
+
+    position: relative;
+
     margin: auto;
 }
 
-/*Styling the classes entered div */
-div.currentClasses
-{
-    min-height: 85px;
-    padding: 5px;
-    margin: 0;
-    box-sizing: border-box;
-    border: 2px solid black;
-    width: 1000px;
-    background-color: white;
+/* used by the javascript but should not be visible */
+#oldClassInput {
+    display: none;
 }
 
-span.course
-{
-    border: 1px solid #ccc;
-    margin: 1px;
+/* list of courses selected */
+.currentClasses {
+    box-sizing: border-box;
+    
+    min-height: 85px;
+    width: 1000px;
+
+    background-color: #FFFFFF;
+
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0;
+}
+
+/* class list legend */
+.currentClasses > span {
+    display: inline-block;
+
     padding: 2px 2px;
+    border-radius: 7px;
+    margin: 1px;
+
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 12px;
+    font-weight: bold;
+}
+.NA {
+    background-color: #FFFFFF;
+
+    border: 2px solid #CCC;
+}
+.curr {
+    background-color: #FFFF44;
+
+    border: 2px solid #FFFF00;
+}
+.done {    
+    background-color: #ABEBAD;
+    
+    border: 2px solid #33CC33;
+}
+/* end class list legend */
+
+/* class list items */
+.course {
+    cursor: pointer;
+    display: inline-block;  
+    
+    background-color: #FFFFFF;
+
+    padding: 2px 2px;
+    border: 1px solid #CCC;
+    border-radius: 7px;
+    margin: 1px;
+    
     color: #666;
     font-family: arial, verdana, tahoma;
     font-size: 14px;
-    display: inline-block;	
-    border-radius: 7px;
-    background-color: white;
-    cursor: pointer;
 }
 
-span.NA {
-    border: 2px solid #ccc;
-    margin: 1px;
-    padding: 2px 2px;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 12px;
-    display: inline-block;	
-    border-radius: 7px;
-    background-color: white;
-}
-
-span.curr
-{
-    margin: 1px;
-    padding: 2px 2px;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 12px;
-    display: inline-block;	
-    border-radius: 7px;
-    border: 2px solid #ffff00;
-    background-color: #ffff44;
-}
-
-span.done
-{	
-    margin: 1px;
-    margin-bottom: 2px;
-    padding: 2px 2px;
-    color: #666;
-    font-family: arial, verdana, tahoma;
-    font-size: 12px;
-    display: inline-block;	
-    border-radius: 7px;
-    border: 2px solid #33cc33;
-    background-color: #adebad;
-
-}
-
-/*Seperating the two forms from each other, and adding a border*/
-form.userinfo
-{
-    border: 2px solid red;
-    margin-bottom: 5px;
-}
-
-form.courseinfo
-{
-    border: 2px solid black;
-    margin-top: 5px;
-}
-
-/*Styling the submit button to make it stand out a little*/
-input.finalsubmit
-{
-    font-weight: bold;
-    font-size: 1.01em;
-}
-
-/*Submit Page CSS*/
-span.message
-{
-	font-weight: bold;
-	font-size: 110%;
-}
-
-a.submitLink
-{
-	color: #004d00;
-}
-
-a.submitLink:hover
-{
-	color: #00e600;
-}
-
-
-#oldClassInput
-{
-    display: none;
-}
-
-#saveStudentForm
-{
-    display: none;
-    position: relative;
-}
-
+/* button to toggle between trees and student info form */
 #toggleFormButton {
+    cursor: pointer;
+
+    height: 40px;
+    width: 400px;
+    
     position: relative;
     left: 300px;
-    width: 400px;
-    height: 40px;
+
     margin: 5px 0;
+    border-radius: 5px;
+
     font-size: 22px;
     font-weight: bold;
 }
-
-#tabButton{
-	width: 1000px; 
-	margin: 0 auto;
-}
-#cmscButton{
-    background-color: #c08d0c;
-    padding: 9px 0;
-    width: 196px;
-    text-align: center;
-    border-radius: 30px;
-    float:left;
-    cursor: pointer;
-    border: 2px solid #181202;
-}
-#cmscButton:hover{
-    background-color: #f0b00f;
+#toggleFormButton:hover {
+    background-color: #CCC;
 }
 
-/*Tree Css*/ 
+/* container for the student info form */
+#studentForm {
+    display: none;
+}
 
-/*formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
-and http://thecodeplayer.com/walkthrough/css3-family-tree */
-#trees {
-    margin: auto;
+/* student info form */
+.userInfo {
+    box-sizing: border-box;
+
+    width: 400px; 
+    
     position: relative;
+    left: 300px;
+    
+    background-color: #FFFFFF;
+
+    padding: 10px;
+    border: 2px solid #FF0000;
+}
+.userInfo > input {
+    background-color: #FFFFFF;
+
+    margin: 5px 0;
+}
+.userInfo > .finalsubmit {
+    font-size: 1.01em;
+    font-weight: bold;
+}
+/* end student info form */
+
+/* tab buttons */
+#tabButtons{
+    width: 1000px;
+
+    margin: 0 auto;
+}
+.cmscButton{
+    cursor: pointer;
+    
+    width: 196px;
+    
+    float:left;
+    
+    background-color: #C08D0C;
+    
+    padding: 9px 0;
+    border: 2px solid #181202;
+    border-radius: 30px;
+    
+    text-align: center;
+}
+.cmscButton:hover{
+    background-color: #F0B00F;
+}
+/* end tab buttons */
+
+/* container element for the trees */
+#trees {
     height: 0;
     width: 1000px;
+
+    position: relative;
+
+    margin: auto;
 }
-div.tree 
-{
-	z-index: -1;
+
+/* tree styling */
+/*formatted after http://thecodeplayer.com/experiments/css3-family-tree-multiple-parents.html
+and http://thecodeplayer.com/walkthrough/css3-family-tree */
+.tree {
     height: 0;
-}
 
-/* this styles the list tags to be receptive to what we're going to do later */
-.tree ul 
-{
-    padding-top: 6px;
-    padding-left: 0;
+    z-index: -1;
+}
+/* added this to work without href attribute */
+.tree li a {
+    cursor: pointer;
+}
+.tree ul {
+    position: relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+    padding: 6px 0 0 0;
     margin: 0;
-    position: relative;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
 }
 
-.tree li
-{
+.tree li {
+    position: relative;
     float: left; 
-    text-align: center;
-    list-style-type: none;
-    position: relative;
-    padding: 6px 0px 0 2px;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
+    
+    padding: 6px 0 0 2px;
+
+    list-style-type: none;
+    
+    text-align: center;
 
 }
 
+/* enforced to center elements in the tree */
 ul > li > a {
     margin-left: 7px !important;
 }
 
-/*We will use ::before and ::after to draw the connectors*/
-.tree li::before, .tree li::after
-{
+/* tree connectors */
+.tree li::before, .tree li::after {
     content: '';
-    position: absolute; top: 0; right: 50%;
+
+    height: 6px;
+    width: 50%;
+
+    position: absolute;
+    right: 50%;
+    top: 0;
+
     border-top: 1px solid #6A49A7;
-    width: 50%; height: 6px;
 }
 
-.tree li::after
-{
-    right: auto; left: 50%;
+.tree li::after {
+    left: 50%;
+    right: auto;
+
     border-left: 1px solid #6A49A7;
 }
 
-/*We need to remove left-right connectors from elements without 
-any siblings*/
-.tree li:only-child::after, .tree li:only-child::before 
-{
+/* hide leaf connectors */
+.tree li:only-child::after, .tree li:only-child::before {
     display: none;
 }
 
-/*Remove space from the top of single children*/
-.tree li:only-child
-{ 
-	padding-top: 0;
+/* remove space from the top of single children */
+.tree li:only-child{ 
+    padding-top: 0;
 }
 
-/*Remove left connector from first child and 
-right connector from last child*/
-.tree li:first-child::before, .tree li:last-child::after
-{
+/* remove left connector from first child and right connector from last child */
+.tree li:first-child::before, .tree li:last-child::after {
     border: 0 none;
 }
 
-/*Adding back the vertical connector to the last nodes*/
-.tree li:last-child::before
-{
+/* adding back the vertical connector to the last nodes */
+.tree li:last-child::before {
     border-right: 1px solid #6A49A7;
     border-radius: 0 5px 0 0;
     -webkit-border-radius: 0 5px 0 0;
     -moz-border-radius: 0 5px 0 0;
 }
 
-.tree li:first-child::after
-{
+.tree li:first-child::after {
     border-radius: 5px 0 0 0;
     -webkit-border-radius: 5px 0 0 0;
     -moz-border-radius: 5px 0 0 0;
 }
 
-/*Time to add downward connectors from parents*/
-.tree ul ul::before
-{
+/* add downward connectors from parents */
+.tree ul ul::before {
     content: '';
-    position: absolute; top: 0; left: 50%;
+
+    height: 6px;        
+    width: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 0;
+
     border-left: 1px solid #6A49A7;
-    width: 0; height: 6px;        
 }
 
+/* box for groupings */
+.tree li a, .tree li span {
+    display: inline-block;
 
-/* This makes the pretty little boxes for classes and categories */
-.tree li a, .tree li span
-{
-    border: 2px solid #6A49A7;
-    padding: 2px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+
+    background-color: #FFFFFF;
+
     margin: 2px;
-    text-decoration: none;
+    border: 2px solid #6A49A7;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    padding: 2px;    
+
     color: #666;
     font-family: arial, verdana, tahoma;
     font-size: 12px;
     font-weight: bold;
-    display: inline-block;
-    background-color: white;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
+    text-decoration: none;
 }
 
 /* these because you can take these classes by default */
-.tree a#cmsc201, .tree a#cmsc203, .tree a#cmsc486, .tree a#cmsc427
-{
-    border: 1px solid #ffff00;
-    background-color: #ffff44;
+.tree #cmsc201, .tree #cmsc203, .tree #cmsc486, .tree #cmsc427 {
+    border: 1px solid #FFFF00;
+    background-color: #FFFF44;
 }
 
-.tree span#no-prereq
-{
-	border: 2px solid #33cc33;
-	background-color: #adebad;
+.tree span#no-prereq {
+    border: 2px solid #33CC33;
+    background-color: #ABEBAD;
 }
+/* end tree styling */
+
+/* thank you page style */
+.message {
+	font-size: 110%;
+    font-weight: bold;
+}
+
+.submitLink {
+	color: #004d00;
+}
+.submitLink:hover {
+	color: #00e600;
+}
+/* end thank you page style */
